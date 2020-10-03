@@ -1,20 +1,24 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/World.gd" type="Script" id=1]
 [ext_resource path="res://scenes/level_1/level_1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/title_screen/TitleScreen.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/level_2/level_2.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/hud/hud_title_screen/HUDTitleScreen.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/hud/hud_menu_escape/HUDMenuEscape.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/hud/hud_level/HUDLevel.tscn" type="PackedScene" id=6]
+[ext_resource path="res://entities/player/Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/level_test/level_test.tscn" type="PackedScene" id=8]
 
 [node name="World" type="Node"]
 script = ExtResource( 1 )
-scenes = [ ExtResource( 2 ), ExtResource( 4 ) ]
+scenes = [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 8 ) ]
 entry_point_scene = ExtResource( 3 )
 hud_title_screen = ExtResource( 5 )
-hud_menu_escape = ExtResource( 6 )
+hud_level = ExtResource( 6 )
+player = ExtResource( 7 )
 
 [node name="Panel" type="Panel" parent="."]
+visible = false
 margin_right = 1920.0
 margin_bottom = 1080.0
 __meta__ = {
@@ -23,3 +27,11 @@ __meta__ = {
 
 [node name="LevelStartPosition" type="Position2D" parent="."]
 position = Vector2( 960, 540 )
+
+[node name="TimerLoadLevelInstance" type="Timer" parent="."]
+one_shot = true
+
+[node name="TimerLoadHUDInstance" type="Timer" parent="."]
+one_shot = true
+[connection signal="timeout" from="TimerLoadLevelInstance" to="." method="_on_TimerLoadLevelInstance_timeout"]
+[connection signal="timeout" from="TimerLoadHUDInstance" to="." method="_on_TimerLoadHUDInstance_timeout"]

@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/tiles/scene_tiles.png" type="Texture" id=2]
 [ext_resource path="res://entities/player/Player.tscn" type="PackedScene" id=3]
 
-[node name="Level_test" type="Node2D"]
+[node name="Level" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -20,4 +20,8 @@ region_enabled = true
 region_rect = Rect2( 277, 7, 64, 64 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
+visible = false
 position = Vector2( -128, 192 )
+
+[node name="PlayerStartPosition" type="Position2D" parent="."]
+position = Vector2( -128, 190 )
