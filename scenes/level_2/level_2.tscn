@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://entities/enemies/Spike_Ball.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/textures/tilesets/beta_tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://entities/enemies/Spike_Trap.tscn" type="PackedScene" id=3]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -224, 128, 0, 0, 0, 0, -128, 128, 0, 0, 0, 0, -128, -160, 0, 0, 0, 0, -224, -160, 0, 0, 0, 0, -224, 128 )
+}
+
+[sub_resource type="Curve2D" id=2]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 224, -160, 0, 0, 0, 0, 224, -64, 0, 0, 0, 0, 224, -160 )
+}
+
+[sub_resource type="Curve2D" id=3]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 224, 160, 0, 0, 0, 0, 160, 224, 0, 0, 0, 0, 128, 192, 0, 0, 0, 0, 192, 128, 0, 0, 0, 0, 224, 160 )
+}
+
+[node name="Level" type="Node2D"]
+
+[node name="PlayerStartPosition" type="Position2D" parent="."]
+position = Vector2( -116.81, 178.114 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+format = 1
+tile_data = PoolIntArray( -262149, 3, 0, -262148, 7, 0, -262147, 7, 0, -262146, 7, 0, -262145, 7, 0, -327680, 7, 0, -327679, 7, 0, -327678, 7, 0, -327677, 7, 0, -327676, 2, 0, -196613, 5, 0, -196612, 13, 0, -262141, 14, 0, -262140, 6, 0, -131077, 5, 0, -196604, 6, 0, -65541, 5, 0, -131068, 6, 0, -5, 5, 0, -65532, 6, 0, 65531, 5, 0, 4, 6, 0, 131067, 5, 0, 65540, 6, 0, 196603, 5, 0, 131076, 6, 0, 262139, 5, 0, 262140, 10, 0, 196611, 9, 0, 196612, 6, 0, 327675, 0, 0, 327676, 4, 0, 327677, 4, 0, 327678, 4, 0, 327679, 4, 0, 262144, 4, 0, 262145, 4, 0, 262146, 4, 0, 262147, 4, 0, 262148, 1, 0 )
+
+[node name="Spike_Ball_1" parent="." instance=ExtResource( 1 )]
+curve = SubResource( 1 )
+
+[node name="Spike_Ball_2" parent="." instance=ExtResource( 1 )]
+curve = SubResource( 2 )
+
+[node name="S_3pike_Ball" parent="." instance=ExtResource( 1 )]
+curve = SubResource( 3 )
+
+[node name="Spike_Trap" parent="." instance=ExtResource( 3 )]
+position = Vector2( 11.1504, -236.162 )
+rotation = 3.14159
