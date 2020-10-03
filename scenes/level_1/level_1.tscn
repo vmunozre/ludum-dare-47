@@ -28,5 +28,5 @@ position = Vector2( -96, 224 )
 position = Vector2( 0, 224 )
 
 [node name="Spike_Ball" parent="." instance=ExtResource( 5 )]
-position = Vector2( -384, 96 )
+position = Vector2( -192, 128 )
 curve = SubResource( 1 )
