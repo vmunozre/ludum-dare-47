@@ -27,7 +27,26 @@ func _physics_process(delta):
 			is_jumping = true
 			velocity.y = jump_speed
 
+func manage_on_key(area):
+	var key_type = area.get("type")
+	keys.append(key_type)
+	print("Key type: " + key_type)
+	area.hide()
+	area.queue_free()
 
-func _on_key_taken(value):
-	print("Key: " + value)
-	keys.append(value)
+func manage_on_door(area):
+	var door_type = area.get("type")
+	if keys.has(door_type):
+		print("Door: Level pass")
+		# TODO, CHANGE STATUS DOOR WITH KEY AND NEXT LEVEL BUTTON
+	else:
+		print("Door: No Key")
+
+func _on_Area2D_area_entered(area):
+	if (area.is_in_group("keys")):
+		manage_on_key(area)
+	if (area.is_in_group("spikes")):
+		print("ENEMY AREA")
+	if (area.is_in_group("doors")):
+		manage_on_door(area)
+

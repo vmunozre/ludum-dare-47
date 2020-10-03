@@ -1,7 +1,6 @@
 extends Node
 
 export (PackedScene) var LevelTutorial
-export (PackedScene) var Player
 
 func _ready():
 	var level_tutorial = LevelTutorial.instance()
