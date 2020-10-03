@@ -9,10 +9,10 @@
 script = ExtResource( 4 )
 
 [node name="TitleBackground" type="Panel" parent="."]
-margin_left = 344.902
-margin_top = 209.455
-margin_right = 857.902
-margin_bottom = 680.455
+margin_left = 202.378
+margin_top = 204.699
+margin_right = 902.379
+margin_bottom = 704.699
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -38,10 +38,10 @@ __meta__ = {
 }
 
 [node name="Instructions" type="Panel" parent="."]
-margin_left = 355.301
-margin_top = 718.0
-margin_right = 846.301
-margin_bottom = 837.0
+margin_left = 200.0
+margin_top = 715.622
+margin_right = 900.0
+margin_bottom = 915.622
 __meta__ = {
 "_edit_use_anchors_": false
 }
