@@ -11,7 +11,7 @@ height = 6.67723
 radius = 24.3933
 height = 6.90795
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=3]
 resource_name = "die"
 step = 0.05
 tracks/0/type = "value"
@@ -27,7 +27,7 @@ tracks/0/keys = {
 "values": [ Rect2( 22, 159, 53, 53 ), Rect2( 94, 163, 53, 50 ), Rect2( 166, 163, 53, 50 ), Rect2( 231, 163, 53, 50 ), Rect2( 297, 163, 53, 50 ), Rect2( 363, 163, 53, 50 ), Rect2( 428, 163, 53, 50 ), Rect2( 500, 163, 54, 50 ), Rect2( 572, 164, 54, 47 ), Rect2( 500, 229, 53, 49 ), Rect2( 572, 227, 53, 55 ) ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=4]
 resource_name = "ghost"
 length = 0.6
 loop = true
@@ -80,8 +80,7 @@ tracks/3/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.407843 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "jump"
+[sub_resource type="Animation" id=5]
 length = 0.3
 loop = true
 step = 0.05
@@ -98,7 +97,7 @@ tracks/0/keys = {
 "values": [ Rect2( 19, 82, 58, 51 ), Rect2( 100, 82, 61, 51 ) ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=6]
 resource_name = "jump_die"
 length = 0.2
 loop = true
@@ -115,8 +114,7 @@ tracks/0/keys = {
 "values": [ Rect2( 92, 231, 61, 52 ), Rect2( 92, 231, 61, 52 ) ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "walk"
+[sub_resource type="Animation" id=7]
 length = 0.6
 loop = true
 step = 0.05
@@ -136,6 +134,7 @@ tracks/0/keys = {
 [node name="Player" type="KinematicBody2D" groups=[
 "player",
 ]]
+z_index = 1
 collision_layer = 5
 collision_mask = 5
 script = ExtResource( 2 )
@@ -143,7 +142,7 @@ script = ExtResource( 2 )
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 22, 10, 53, 54 )
+region_rect = Rect2( 22, 159, 53, 53 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -160,9 +159,11 @@ shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "walk"
-anims/die = SubResource( 5 )
-anims/ghost = SubResource( 6 )
-anims/jump = SubResource( 4 )
-anims/jump_die = SubResource( 7 )
-anims/walk = SubResource( 3 )
+anims/die = SubResource( 3 )
+anims/ghost = SubResource( 4 )
+anims/jump = SubResource( 5 )
+anims/jump_die = SubResource( 6 )
+anims/walk = SubResource( 7 )
+
+[node name="Tween" type="Tween" parent="."]
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]

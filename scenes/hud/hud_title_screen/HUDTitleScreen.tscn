@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/textures/tilesets/beta.png" type="Texture" id=1]
 [ext_resource path="res://assets/textures/preview_levels/level1_preview.png" type="Texture" id=2]
 [ext_resource path="res://assets/textures/preview_levels/level2_preview.png" type="Texture" id=3]
 [ext_resource path="res://scripts/HUDTitleScreen.gd" type="Script" id=4]
+[ext_resource path="res://assets/textures/preview_levels/level3_preview.png" type="Texture" id=5]
 
 [node name="HUDTitleScreen" type="CanvasLayer"]
 script = ExtResource( 4 )
@@ -56,25 +57,40 @@ align = 1
 valign = 1
 
 [node name="Level0" type="Button" parent="."]
-margin_left = 1024.0
+margin_left = 1000.0
 margin_top = 384.0
-margin_right = 1675.0
+margin_right = 1651.0
 margin_bottom = 1026.0
 rect_scale = Vector2( 0.3, 0.3 )
 icon = ExtResource( 2 )
+expand_icon = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Level1" type="Button" parent="."]
-margin_left = 1280.0
+margin_left = 1250.0
 margin_top = 384.0
-margin_right = 1930.0
+margin_right = 1900.0
 margin_bottom = 1028.0
 rect_scale = Vector2( 0.3, 0.3 )
 icon = ExtResource( 3 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level2" type="Button" parent="."]
+margin_left = 1500.0
+margin_top = 384.0
+margin_right = 2150.0
+margin_bottom = 1028.0
+rect_scale = Vector2( 0.3, 0.3 )
+icon = ExtResource( 5 )
+expand_icon = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="Level0" to="." method="_on_ButtonLevel0_pressed"]
 [connection signal="pressed" from="Level1" to="." method="_on_ButtonLevel1_pressed"]
+[connection signal="pressed" from="Level2" to="." method="_on_ButtonLevel2_pressed"]
