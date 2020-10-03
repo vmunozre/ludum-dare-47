@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/hud/hud_menu_escape/HUDMenuEscape.gd" type="Script" id=1]
+
+[node name="HUDMenuEscape" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="Background" type="Panel" parent="."]
+margin_left = 687.137
+margin_top = 264.362
+margin_right = 1287.14
+margin_bottom = 370.362
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RestartLevel" type="Button" parent="."]
+margin_left = 773.075
+margin_top = 289.25
+margin_right = 873.075
+margin_bottom = 349.25
+text = "Restart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChangeLevel" type="Button" parent="."]
+margin_left = 937.472
+margin_top = 291.469
+margin_right = 1037.47
+margin_bottom = 351.469
+text = "Change level"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 1104.73
+margin_top = 284.857
+margin_right = 1204.73
+margin_bottom = 344.857
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="RestartLevel" to="." method="_on_RestartLevel_pressed"]
+[connection signal="pressed" from="ChangeLevel" to="." method="_on_ChangeLevel_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
