@@ -1,0 +1,80 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/textures/tilesets/beta.png" type="Texture" id=1]
+[ext_resource path="res://assets/textures/preview_levels/level1_preview.png" type="Texture" id=2]
+[ext_resource path="res://assets/textures/preview_levels/level2_preview.png" type="Texture" id=3]
+[ext_resource path="res://scripts/HUDTitleScreen.gd" type="Script" id=4]
+
+[node name="HUDTitleScreen" type="CanvasLayer"]
+script = ExtResource( 4 )
+
+[node name="TitleBackground" type="Panel" parent="."]
+margin_left = 202.378
+margin_top = 204.699
+margin_right = 902.379
+margin_bottom = 704.699
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="TitleBackground"]
+position = Vector2( 423.098, 366.545 )
+scale = Vector2( 2.22438, 2.03888 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 450.421, -2.63158, 60, 69.4737 )
+region_filter_clip = true
+
+[node name="Label" type="Label" parent="TitleBackground"]
+margin_left = 39.098
+margin_top = 46.545
+margin_right = 487.098
+margin_bottom = 238.545
+text = "Título to flamígero"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Instructions" type="Panel" parent="."]
+margin_left = 200.0
+margin_top = 715.622
+margin_right = 900.0
+margin_bottom = 915.622
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Instructions"]
+margin_left = 41.5992
+margin_top = 31.1011
+margin_right = 425.599
+margin_bottom = 95.1011
+text = "Instrucciones para dejarlo todo clarinete"
+align = 1
+valign = 1
+
+[node name="Level0" type="Button" parent="."]
+margin_left = 1024.0
+margin_top = 384.0
+margin_right = 1675.0
+margin_bottom = 1026.0
+rect_scale = Vector2( 0.3, 0.3 )
+icon = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level1" type="Button" parent="."]
+margin_left = 1280.0
+margin_top = 384.0
+margin_right = 1930.0
+margin_bottom = 1028.0
+rect_scale = Vector2( 0.3, 0.3 )
+icon = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Level0" to="." method="_on_ButtonLevel0_pressed"]
+[connection signal="pressed" from="Level1" to="." method="_on_ButtonLevel1_pressed"]

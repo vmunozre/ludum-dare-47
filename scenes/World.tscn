@@ -1,18 +1,25 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/World.gd" type="Script" id=1]
-[ext_resource path="res://scenes/level_test/level_test.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/level_1/level_1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/title_screen/TitleScreen.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/level_2/level_2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/hud/hud_title_screen/HUDTitleScreen.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/hud/hud_menu_escape/HUDMenuEscape.tscn" type="PackedScene" id=6]
 
 [node name="World" type="Node"]
 script = ExtResource( 1 )
-LevelTutorial = ExtResource( 2 )
+scenes = [ ExtResource( 2 ), ExtResource( 4 ) ]
+entry_point_scene = ExtResource( 3 )
+hud_title_screen = ExtResource( 5 )
+hud_menu_escape = ExtResource( 6 )
 
 [node name="Panel" type="Panel" parent="."]
-margin_right = 640.0
-margin_bottom = 640.0
+margin_right = 1920.0
+margin_bottom = 1080.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="LevelStartPosition" type="Position2D" parent="."]
-position = Vector2( 320, 320 )
+position = Vector2( 960, 540 )
