@@ -11,7 +11,9 @@ height = 6.67723
 radius = 24.3933
 height = 6.90795
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" groups=[
+"player",
+]]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -29,3 +31,4 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 2 )
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
