@@ -1,10 +1,42 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://assets/textures/tilesets/beta_3.png" type="Texture" id=1]
+[ext_resource path="res://assets/tiles/scene_tiles.png" type="Texture" id=1]
 [ext_resource path="res://entities/door/Door.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 26.8671
+
+[sub_resource type="Animation" id=2]
+resource_name = "open"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 13, 431, 61, 62 ), Rect2( 84, 431, 61, 62 ), Rect2( 155, 431, 61, 62 ), Rect2( 222, 431, 61, 62 ), Rect2( 288, 431, 61, 62 ), Rect2( 354, 431, 61, 62 ), Rect2( 418, 431, 61, 62 ), Rect2( 483, 431, 61, 62 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "opened"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ Rect2( 222, 431, 61, 62 ), Rect2( 288, 431, 61, 62 ) ]
+}
 
 [node name="Door" type="Area2D" groups=[
 "doors",
@@ -14,8 +46,13 @@ script = ExtResource( 2 )
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 384, 0, 64, 64 )
+region_rect = Rect2( 550, 431, 61, 62 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( -0.863846, 2.37556 )
 shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/open = SubResource( 2 )
+anims/opened = SubResource( 3 )
