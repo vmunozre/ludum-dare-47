@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://assets/textures/enemies/enemy_spikeball_placeholder.png" type="Texture" id=1]
+[ext_resource path="res://assets/tiles/scene_tiles.png" type="Texture" id=1]
 [ext_resource path="res://entities/enemies/Spike_Ball.gd" type="Script" id=2]
 
 [sub_resource type="Curve2D" id=1]
@@ -30,3 +30,5 @@ shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="PathFollow2D"]
 texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 295, 300, 51, 52 )

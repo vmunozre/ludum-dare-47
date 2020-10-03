@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://assets/textures/enemies/enemy_spiketrap_placeholder.png" type="Texture" id=1]
+[ext_resource path="res://assets/tiles/scene_tiles.png" type="Texture" id=1]
 [ext_resource path="res://entities/enemies/Spike_Trap.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 20.0445
-height = 32.0
+radius = 15.8298
+height = 20.1197
 
 [node name="Spike_Trap" type="Area2D" groups=[
 "spikes",
@@ -13,8 +13,9 @@ height = 32.0
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 2, 1 )
 texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 365, 304, 57, 32 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708

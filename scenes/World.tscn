@@ -18,7 +18,6 @@ hud_level = ExtResource( 6 )
 player = ExtResource( 7 )
 
 [node name="Panel" type="Panel" parent="."]
-visible = false
 margin_right = 1920.0
 margin_bottom = 1080.0
 __meta__ = {
