@@ -1,17 +1,31 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://assets/textures/player/player_spriteframes.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://assets/textures/tilesets/beta.png" type="Texture" id=1]
 [ext_resource path="res://entities/player/Player.gd" type="Script" id=2]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 22.6829, 27.3728 )
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 22.2015
+height = 6.67723
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 24.3933
+height = 6.90795
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 448, 0, 64, 64 )
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = ExtResource( 1 )
-animation = "placeholder"
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 2 )
