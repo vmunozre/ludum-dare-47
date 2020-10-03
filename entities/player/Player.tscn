@@ -29,7 +29,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=6]
 resource_name = "ghost"
-length = 0.4
+length = 0.6
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:region_rect")
@@ -38,7 +38,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.4 ),
+"times": PoolRealArray( 0, 0.6 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Rect2( 572, 227, 53, 55 ), Rect2( 572, 227, 53, 55 ) ]
@@ -50,7 +50,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
+"times": PoolRealArray( 0, 0.3, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1, 1 ), Vector2( 0.9, 1.1 ), Vector2( 1, 1 ) ]
@@ -62,7 +62,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.1, 0.3, 0.4 ),
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 3.1, -3.1, 0.0 ]
@@ -74,10 +74,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
+"times": PoolRealArray( 0, 0.3, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.54902 ), Color( 1, 1, 1, 1 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.407843 ), Color( 1, 1, 1, 1 ) ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -136,12 +136,14 @@ tracks/0/keys = {
 [node name="Player" type="KinematicBody2D" groups=[
 "player",
 ]]
+collision_layer = 5
+collision_mask = 5
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 572, 227, 53, 55 )
+region_rect = Rect2( 22, 10, 53, 54 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
