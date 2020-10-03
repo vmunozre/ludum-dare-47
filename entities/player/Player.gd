@@ -11,7 +11,7 @@ export(int) var jump_speed = -750
 var is_jumping = false
 
 func _ready():
-	velocity = Vector2(1000, 0)
+	velocity = Vector2(0, 0)
 
 func _physics_process(delta):
 	velocity.x = speed
@@ -21,11 +21,20 @@ func _physics_process(delta):
 	velocity = velocity.rotated(-rotation)
 
 	if is_on_floor():
+		check_animation("walk")
 		rotation = get_floor_normal().angle() + PI/2
 		is_jumping = false
 		if Input.is_action_just_pressed("jump"):
 			is_jumping = true
 			velocity.y = jump_speed
+	else:
+		check_animation("jump")
+		if is_on_wall():
+			rotation = rotation - PI/2
+
+func check_animation(name):
+	if not name == $AnimationPlayer.current_animation:
+		$AnimationPlayer.play(name)
 
 func manage_on_key(area):
 	var key_type = area.get("type")
@@ -42,9 +51,14 @@ func manage_on_door(area):
 	else:
 		print("Door: No Key")
 
+func manage_death():
+	pass
+
 func _on_Area2D_area_entered(area):
 	if (area.is_in_group("keys")):
 		manage_on_key(area)
+	if (area.is_in_group("enemies")):
+		print("ENEMY AREA")
 	if (area.is_in_group("spikes")):
 		print("ENEMY AREA")
 	if (area.is_in_group("doors")):
