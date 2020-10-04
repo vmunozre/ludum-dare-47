@@ -172,3 +172,5 @@ func _on_TimerLoadHUDInstance_timeout():
 				current_hud_instance.connect("change_level", self, "_on_Change_level")
 				current_hud_instance.connect("quit", self, "_on_Quit")
 
+func load_introduction():
+	print("LOAD introduction")
