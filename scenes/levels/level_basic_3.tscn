@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/basic_level/Basic_level.tscn" type="PackedScene" id=1]
+
+[node name="level_basic_3" instance=ExtResource( 1 )]
+level_name = "basic_3"
+
+[node name="TileMap" parent="." index="0"]
+tile_data = PoolIntArray( -262150, 2, 0, -262149, 14, 0, -262148, 7, 0, -262147, 7, 0, -262146, 7, 0, -262145, 15, 0, -327680, 7, 0, -327679, 14, 0, -327678, 7, 0, -327677, 7, 0, -327676, 15, 0, -327675, 3, 0, -196614, 10, 0, -196613, 33, 0, -196609, 34, 0, -262144, 7, 0, -262143, 33, 0, -262140, 34, 0, -262139, 11, 0, -131078, 5, 0, -196603, 4, 0, -65542, 5, 0, -65539, 18, 0, -131072, 23, 0, -131071, 22, 0, -131070, 21, 0, -131067, 4, 0, -6, 5, 0, -3, 19, 0, -65531, 4, 0, 65530, 5, 0, 65533, 19, 0, 2, 18, 0, 5, 4, 0, 131066, 5, 0, 131069, 20, 0, 65538, 19, 0, 65541, 4, 0, 196602, 5, 0, 131074, 20, 0, 131077, 4, 0, 262138, 8, 0, 262139, 35, 0, 196612, 36, 0, 196613, 9, 0, 327674, 0, 0, 327675, 12, 0, 327676, 6, 0, 327677, 6, 0, 327678, 6, 0, 327679, 6, 0, 262144, 6, 0, 262145, 6, 0, 262146, 6, 0, 262147, 6, 0, 262148, 13, 0, 262149, 1, 0 )
+
+[node name="TileMapPart2" parent="." index="1"]
+tile_data = PoolIntArray( -327680, 2, 0, -262144, 7, 0 )
+
+[node name="Background" parent="." index="2"]
+scale = Vector2( 12, 10 )
+
+[node name="PlayerStartPosition" parent="." index="3"]
+position = Vector2( -164.234, 185.888 )
+
+[node name="Key" parent="." index="4"]
+position = Vector2( -100.051, 75.8768 )
+
+[node name="Door" parent="." index="5"]
+position = Vector2( -34.5106, 225 )

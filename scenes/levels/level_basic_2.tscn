@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/basic_level/Basic_level.tscn" type="PackedScene" id=1]
+[ext_resource path="res://entities/enemies/Spike_Trap.tscn" type="PackedScene" id=2]
+[ext_resource path="res://entities/enemies/Spike_Ball.tscn" type="PackedScene" id=3]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 101.102, -182.486, 0, 0, 0, 0, 101.102, 105.514, 0, 0, 0, 0, 5.10232, 105.514, 0, 0, 0, 0, 5.10226, -182.486, 0, 0, 0, 0, 101.102, -182.486 )
+}
+
+[sub_resource type="Curve2D" id=2]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -64, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 32, 0, 0, 0, 0, -32, 96, 0, 0, 0, 0, -64, 64 )
+}
+
+[sub_resource type="Curve2D" id=3]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -96, 128, 0, 0, 0, 0, -96, 32, 0, 0, 0, 0, -96, 128 )
+}
+
+[node name="level_basic_2" instance=ExtResource( 1 )]
+level_name = "basic_2"
+
+[node name="Spike_Trap" parent="." index="6" instance=ExtResource( 2 )]
+position = Vector2( 8.47571, -240.951 )
+rotation = 3.14159
+
+[node name="Spike_Ball" parent="." index="7" instance=ExtResource( 3 )]
+position = Vector2( -122.898, -54.4859 )
+rotation = -3.14159
+curve = SubResource( 1 )
+
+[node name="Spike_Ball2" parent="." index="8" instance=ExtResource( 3 )]
+position = Vector2( 160, 224 )
+rotation = -3.14159
+curve = SubResource( 2 )
+
+[node name="Spike_Ball3" parent="." index="9" instance=ExtResource( 3 )]
+position = Vector2( 128, -32 )
+rotation = -3.14159
+curve = SubResource( 3 )

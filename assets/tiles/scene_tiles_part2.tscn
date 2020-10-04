@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/tiles/scene_tiles_part2.png" type="Texture" id=1]
+
+[node name="scene_tiles_part2" type="Node"]
+
+[node name="exterior_to_center_left" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 163, 16, 64, 64 )
+
+[node name="exterior_to_center_right" type="Sprite" parent="."]
+position = Vector2( 86.9019, 1.49832 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 237, 16, 64, 64 )
+
+[node name="exterior_to_center_up" type="Sprite" parent="."]
+position = Vector2( 176.8, 3.05176e-05 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 15, 15, 64, 64 )
+
+[node name="exterior_to_center_down" type="Sprite" parent="."]
+position = Vector2( 260.705, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 90, 15, 64, 64 )
+
+[node name="center_to_interior_left" type="Sprite" parent="."]
+position = Vector2( -1.49829, 79.4103 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 237, 92, 64, 64 )
+
+[node name="center_to_interior_right" type="Sprite" parent="."]
+position = Vector2( 85.4035, 82.4069 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 163, 92, 64, 64 )
+
+[node name="center_to_interior_up" type="Sprite" parent="."]
+position = Vector2( 175.302, 82.4069 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 90, 92, 64, 64 )
+
+[node name="center_to_interior_down" type="Sprite" parent="."]
+position = Vector2( 263.702, 85.4035 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 14, 92, 64, 64 )
