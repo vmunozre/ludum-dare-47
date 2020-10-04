@@ -81,6 +81,8 @@ margin_left = 22.2449
 margin_top = 284.286
 margin_right = 67.2449
 margin_bottom = 328.286
+focus_mode = 0
+enabled_focus_mode = 0
 texture_normal = ExtResource( 5 )
 expand = true
 __meta__ = {
@@ -88,6 +90,7 @@ __meta__ = {
 }
 
 [node name="BackgroundInventory" type="Panel" parent="."]
+visible = false
 margin_left = 1625.68
 margin_top = 29.0112
 margin_right = 1858.68
