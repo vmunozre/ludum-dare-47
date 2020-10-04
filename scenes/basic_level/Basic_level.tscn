@@ -12,11 +12,15 @@ script = ExtResource( 5 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
+collision_layer = 5
+collision_mask = 5
 format = 1
 tile_data = PoolIntArray( -262149, 2, 0, -262148, 14, 0, -262147, 7, 0, -262146, 7, 0, -262145, 7, 0, -327680, 7, 0, -327679, 7, 0, -327678, 7, 0, -327677, 15, 0, -327676, 3, 0, -196613, 10, 0, -196612, 33, 0, -262141, 34, 0, -262140, 11, 0, -131077, 5, 0, -196604, 4, 0, -65541, 5, 0, -131068, 4, 0, -5, 5, 0, -65532, 4, 0, 65531, 5, 0, 4, 4, 0, 131067, 5, 0, 65540, 4, 0, 196603, 5, 0, 131076, 4, 0, 262139, 8, 0, 262140, 35, 0, 196611, 36, 0, 196612, 9, 0, 327675, 0, 0, 327676, 12, 0, 327677, 6, 0, 327678, 6, 0, 327679, 6, 0, 262144, 6, 0, 262145, 6, 0, 262146, 6, 0, 262147, 13, 0, 262148, 1, 0 )
 
 [node name="TileMapPart2" type="TileMap" parent="."]
 tile_set = ExtResource( 6 )
+collision_layer = 5
+collision_mask = 5
 format = 1
 
 [node name="Background" type="Sprite" parent="."]
