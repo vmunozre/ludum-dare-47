@@ -4,3 +4,6 @@
 
 [node name="level_tutorial_1" instance=ExtResource( 1 )]
 level_name = "tutorial_1"
+
+[node name="TileMapExtras" parent="." index="2"]
+tile_data = PoolIntArray( -262148, 12, 0, -327679, 16, 0, -327677, 15, 0, -196610, 8, 0, -196609, 9, 0, -262143, 6, 0, -262142, 7, 0, 4, 1, 0, 262143, 3, 0, 196609, 4, 0, 196610, 2, 0, 327677, 0, 0, 327679, 16, 0, 262148, 14, 0 )

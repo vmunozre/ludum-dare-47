@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/tiles/scene_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/tiles/scene_tiles.png" type="Texture" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://entities/door/Door.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/basic_level/Basic_level.gd" type="Script" id=5]
 [ext_resource path="res://assets/tiles/scene_tileset_part2.tres" type="TileSet" id=6]
+[ext_resource path="res://assets/tiles/extra_tileset.tres" type="TileSet" id=7]
+[ext_resource path="res://assets/textures/extras/detail_background.png" type="Texture" id=8]
 
 [node name="Basic_level" type="Node2D"]
 script = ExtResource( 5 )
@@ -23,6 +25,10 @@ collision_layer = 5
 collision_mask = 5
 format = 1
 
+[node name="TileMapExtras" type="TileMap" parent="."]
+tile_set = ExtResource( 7 )
+format = 1
+
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( -1.52588e-05, -1.52588e-05 )
 scale = Vector2( 10, 10 )
@@ -30,6 +36,10 @@ z_index = -10
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 277, 7, 64, 64 )
+
+[node name="Detailed_background" type="Sprite" parent="."]
+z_index = -5
+texture = ExtResource( 8 )
 
 [node name="PlayerStartPosition" type="Position2D" parent="."]
 position = Vector2( 0, 184 )
