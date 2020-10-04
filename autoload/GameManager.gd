@@ -17,14 +17,15 @@ func load_next_level():
 	var next_level = index_level + 1
 	if index_level >= -1 and next_level < levels_unlocked.size():
 		world.load_new_level(index_level+1)
+		return
 	else:
 		for i in scenes.size():
 			var lvl = scenes[i].instance()
 			if not is_level_unlocked(lvl):
 				levels_unlocked.append(lvl.level_name)
 				world.load_new_level(i)
-				break
+				return
 			else:
 				print("Level " + lvl.level_name + " is already unlocke")
-		# TODO FINISH GAME
+	world.go_home()
 
