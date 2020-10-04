@@ -15,12 +15,13 @@ func is_level_unlocked(level):
 
 func load_next_level():
 	var preLevel = scenes[world.current_level_index]
-	var actual_level_name = preLevel.instance().level_name
+	var preLvlInstance = preLevel.instance()
+	var actual_level_name = preLvlInstance.level_name
 	var index_level = levels_unlocked.find(actual_level_name, 0)
 	var next_level = index_level + 1
 	if index_level >= -1 and next_level < levels_unlocked.size():
 		world.load_new_level(next_level)
-		actual_level_name.queue_free()
+		preLvlInstance.queue_free()
 		return
 	else:
 		for i in scenes.size():
