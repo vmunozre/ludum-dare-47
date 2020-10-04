@@ -11,14 +11,17 @@ tile_data = PoolIntArray( -262150, 2, 0, -262149, 14, 0, -262148, 7, 0, -262147,
 [node name="TileMapPart2" parent="." index="1"]
 tile_data = PoolIntArray( -327680, 2, 0, -262144, 7, 0 )
 
-[node name="Background" parent="." index="2"]
+[node name="Background" parent="." index="3"]
 scale = Vector2( 12, 10 )
 
-[node name="PlayerStartPosition" parent="." index="3"]
+[node name="PlayerStartPosition" parent="." index="5"]
 position = Vector2( -164.234, 185.888 )
 
-[node name="Key" parent="." index="4"]
+[node name="KeyPosition" parent="." index="6"]
+position = Vector2( -99.6169, 76 )
+
+[node name="Key" parent="." index="7"]
 position = Vector2( -100.051, 75.8768 )
 
-[node name="Door" parent="." index="5"]
+[node name="Door" parent="." index="8"]
 position = Vector2( -34.5106, 225 )

@@ -76,6 +76,14 @@ func manage_revive():
 	$Sprite.modulate = Color(1, 1, 1, 1) #set default
 	is_dying = false
 	is_ghost = false
+	yield($AnimationPlayer,"animation_finished")
+	reset_scale()
+
+func reset_scale():
+	self.scale.x = 1
+	self.scale.y = 1
+	$Sprite.scale.x = 1
+	$Sprite.scale.x = 1
 
 func manage_on_key(area):
 	var key_type = area.get("type")
@@ -104,6 +112,10 @@ func manage_death():
 	SoundManager.play(SoundManager.lose_sound)
 	yield($AnimationPlayer,"animation_finished")
 	rotation = 0
+	if keys.size() > 0:
+		keys = []
+		GameManager.world.add_key()
+	
 	is_ghost = true
 
 func _on_Area2D_area_entered(area):
@@ -123,6 +135,7 @@ func reset_player():
 	velocity = Vector2(1000, 0)
 	rotation = 0
 	is_jumping = false
+	keys = []
 
 func toggle_light(state):
 	$Light2D.enabled = state
@@ -167,5 +180,6 @@ func transition_between_levels(_delta):
 		$Area2D.set_deferred("disabled", false)
 		$Area2D/CollisionShape2D.set_deferred("disabled", false)
 		GameManager.world.toggle_light_player()
+		reset_scale()
 		#rotation = 2 * PI
 		#todo activate collisions
