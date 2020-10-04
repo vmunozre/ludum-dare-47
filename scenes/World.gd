@@ -28,10 +28,7 @@ func _ready():
 		if is_cheat_skip_introduction:
 				_on_Introduction_finished()
 				return
-		current_hud_instance = hud_introduction.instance()
-		add_child(current_hud_instance)
-		current_hud_instance.connect("introduction_finished", self, "_on_Introduction_finished")
-		current_hud_instance.create_carousel(introduction_slides)
+		load_introduction(true)
 
 
 func _on_Introduction_finished():
@@ -172,5 +169,15 @@ func _on_TimerLoadHUDInstance_timeout():
 				current_hud_instance.connect("change_level", self, "_on_Change_level")
 				current_hud_instance.connect("quit", self, "_on_Quit")
 
-func load_introduction():
+func load_introduction(is_first_time):
+	remove_child(current_hud_instance)
+	remove_child(current_level_instance)
+	current_hud_instance = hud_introduction.instance()
+	if not is_first_time:
+		current_hud_instance.time_fadein = 0
+		current_hud_instance.time_fadein_button = 0
+		current_hud_instance.get_node("TimerStartIntroduction").wait_time = 0.5
+	add_child(current_hud_instance)
+	current_hud_instance.connect("introduction_finished", self, "_on_Introduction_finished")
+	current_hud_instance.create_carousel(introduction_slides)
 	print("LOAD introduction")
