@@ -1,0 +1,71 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/hud/hud_title_screen/HUDLevelItem.gd" type="Script" id=1]
+
+[sub_resource type="StreamTexture" id=1]
+load_path = "res://.import/level1_preview.png-c2cca55cc7837123cc6da69444a95e71.stex"
+
+[node name="LevelItem" type="MarginContainer"]
+margin_right = 700.0
+margin_bottom = 188.0
+custom_constants/margin_right = 21
+custom_constants/margin_top = 15
+custom_constants/margin_left = 12
+custom_constants/margin_bottom = 23
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 12.0
+margin_top = 15.0
+margin_right = 679.0
+margin_bottom = 165.0
+rect_min_size = Vector2( 0, 150 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 4
+
+[node name="MarginThumbnail" type="MarginContainer" parent="HBoxContainer"]
+margin_right = 153.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="Thumbnail" type="TextureRect" parent="HBoxContainer/MarginThumbnail"]
+margin_right = 153.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.25
+texture = SubResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginButton" type="MarginContainer" parent="HBoxContainer"]
+margin_left = 157.0
+margin_right = 667.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 50
+custom_constants/margin_top = 50
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 50
+
+[node name="Button" type="Button" parent="HBoxContainer/MarginButton"]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 460.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+text = "Pepe de los palotes"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="HBoxContainer/MarginButton/Button" to="." method="_on_Button_pressed"]

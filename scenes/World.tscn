@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/World.gd" type="Script" id=1]
 [ext_resource path="res://scenes/level_1/level_1.tscn" type="PackedScene" id=2]
@@ -8,10 +8,15 @@
 [ext_resource path="res://scenes/hud/hud_level/HUDLevel.tscn" type="PackedScene" id=6]
 [ext_resource path="res://entities/player/Player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/level_test/level_test.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/textures/preview_levels/level1_preview.png" type="Texture" id=9]
+[ext_resource path="res://assets/textures/preview_levels/level2_preview.png" type="Texture" id=10]
+[ext_resource path="res://assets/textures/preview_levels/level3_preview.png" type="Texture" id=11]
 
 [node name="World" type="Node"]
 script = ExtResource( 1 )
-scenes = [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 8 ) ]
+scenes = [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 8 ) ]
+scene_thumbnails = [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 11 ) ]
+scene_texts = [ "Tutorial", "Spiky scary", "If I fit, I win", "Again???" ]
 entry_point_scene = ExtResource( 3 )
 hud_title_screen = ExtResource( 5 )
 hud_level = ExtResource( 6 )
