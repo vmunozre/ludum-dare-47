@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/hud/hud_level/HUDLevel.gd" type="Script" id=1]
 [ext_resource path="res://assets/textures/enemies/enemy_spikeball_placeholder.png" type="Texture" id=2]
+[ext_resource path="res://theme/theme.tres" type="Theme" id=3]
 
 [node name="HUDLevel" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -11,6 +12,7 @@ margin_left = 23.0
 margin_top = 6.0
 margin_right = 249.0
 margin_bottom = 412.0
+theme = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -20,6 +22,7 @@ margin_left = 37.0
 margin_top = 30.0
 margin_right = 192.0
 margin_bottom = 128.0
+theme = ExtResource( 3 )
 text = "Restart"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -30,6 +33,7 @@ margin_left = 38.0
 margin_top = 162.0
 margin_right = 193.0
 margin_bottom = 254.0
+theme = ExtResource( 3 )
 text = "Change level"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -40,6 +44,7 @@ margin_left = 41.0
 margin_top = 281.0
 margin_right = 191.0
 margin_bottom = 379.0
+theme = ExtResource( 3 )
 text = "Quit"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -50,6 +55,7 @@ margin_left = 1625.68
 margin_top = 29.0112
 margin_right = 1858.68
 margin_bottom = 435.011
+theme = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

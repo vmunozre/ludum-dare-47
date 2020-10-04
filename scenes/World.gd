@@ -111,6 +111,9 @@ func _on_TimerLoadHUDInstance_timeout():
         current_hud_instance = hud_title_screen.instance()
         add_child(current_hud_instance)
         current_hud_instance.connect("level_selected", self, "_on_Level_selected")
+        #Loading all levels
+        for i in scenes.size():
+            current_hud_instance.add_level_item(i, scene_thumbnails[i], scene_texts[i])
     else:
         current_hud_instance = hud_level.instance()
         add_child(current_hud_instance)
