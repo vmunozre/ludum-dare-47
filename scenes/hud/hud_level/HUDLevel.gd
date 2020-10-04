@@ -9,9 +9,10 @@ signal restart_level
 signal change_level
 signal quit
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+        pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -20,15 +21,24 @@ func _ready():
 
 
 func _on_RestartLevel_pressed():
-	emit_signal("restart_level")
-	pass # Replace with function body.
+        emit_signal("restart_level")
+        pass # Replace with function body.
 
 
 func _on_ChangeLevel_pressed():
-	emit_signal("change_level")
-	pass # Replace with function body.
+        emit_signal("change_level")
+        pass # Replace with function body.
 
 
 func _on_Quit_pressed():
-	emit_signal("quit")
-	pass # Replace with function body.
+        emit_signal("quit")
+        pass # Replace with function body.
+
+
+func _on_Mute_pressed():
+        #SoundManager.mute()
+        #if SoundManager.is_mute:
+                #$BackgroundMenu/Mute.texture_normal = load("res://assets/icons/icon_mute.png")
+        #else:
+                #$BackgroundMenu/Mute.texture_normal = load("res://assets/icons/icon_unmute.png")
+        pass # Replace with function body.
