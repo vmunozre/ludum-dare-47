@@ -23,7 +23,10 @@ scale = Vector2( 14, 10 )
 position = Vector2( -3.99999, 0 )
 scale = Vector2( 1.53642, 1 )
 
-[node name="Key" parent="." index="6"]
+[node name="KeyPosition" parent="." index="6"]
+position = Vector2( -42, -64 )
+
+[node name="Key" parent="." index="7"]
 position = Vector2( -43, -64 )
 
 [node name="Enemy" parent="." index="8" instance=ExtResource( 2 )]

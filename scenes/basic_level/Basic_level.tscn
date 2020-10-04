@@ -45,6 +45,9 @@ texture = ExtResource( 8 )
 [node name="PlayerStartPosition" type="Position2D" parent="."]
 position = Vector2( 0, 184 )
 
+[node name="KeyPosition" type="Position2D" parent="."]
+position = Vector2( 0, -128 )
+
 [node name="Key" parent="." instance=ExtResource( 3 )]
 position = Vector2( 0, -128 )
 
