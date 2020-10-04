@@ -3,4 +3,4 @@
 [ext_resource path="res://scenes/basic_level/Basic_level.tscn" type="PackedScene" id=1]
 
 [node name="level_tutorial_1" instance=ExtResource( 1 )]
-level_name = "level_tutorial_1"
+level_name = "tutorial_1"
