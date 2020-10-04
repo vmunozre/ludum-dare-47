@@ -18,7 +18,7 @@ func _ready():
 		available.append(p)
 		p.connect("finished", self, "_on_stream_finished", [p])
 		p.bus = bus
-	play(music_sound)
+	# play(music_sound)
 func _on_stream_finished(stream):
 	available.append(stream)
 
