@@ -28,6 +28,8 @@ region_rect = Rect2( 277, 7, 64, 64 )
 [node name="PlayerStartPosition" type="Position2D" parent="."]
 position = Vector2( 0, 184 )
 
+[node name="KeyPosition" type="Position2D" parent="."]
+
 [node name="Key" parent="." instance=ExtResource( 3 )]
 position = Vector2( 0, -128 )
 
@@ -45,8 +47,10 @@ __meta__ = {
 }
 
 [node name="TileMapExtras" type="TileMap" parent="."]
+position = Vector2( 0.434082, -128 )
 tile_set = ExtResource( 6 )
 format = 1
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color( 0.0196078, 0.0235294, 0.0705882, 1 )
