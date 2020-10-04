@@ -8,7 +8,7 @@ radius = 26.8671
 
 [sub_resource type="Animation" id=2]
 resource_name = "open"
-length = 0.7
+length = 1.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:region_rect")
 tracks/0/interp = 1
@@ -16,7 +16,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ Rect2( 13, 431, 61, 62 ), Rect2( 84, 431, 61, 62 ), Rect2( 155, 431, 61, 62 ), Rect2( 222, 431, 61, 62 ), Rect2( 288, 431, 61, 62 ), Rect2( 354, 431, 61, 62 ), Rect2( 418, 431, 61, 62 ), Rect2( 483, 431, 61, 62 ) ]
