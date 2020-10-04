@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://scenes/World.gd" type="Script" id=1]
 [ext_resource path="res://assets/tiles/scene_tiles.png" type="Texture" id=2]
@@ -7,6 +7,21 @@
 [ext_resource path="res://scenes/hud/hud_title_screen/HUDTitleScreen.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/hud/hud_level/HUDLevel.tscn" type="PackedScene" id=6]
 [ext_resource path="res://entities/player/Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/introduction/Inside the Planet Diapositiva 2.png" type="Texture" id=8]
+[ext_resource path="res://assets/introduction/Inside the Planet Diapositiva 13.png" type="Texture" id=9]
+[ext_resource path="res://assets/introduction/Inside the Planet Diapositiva 4.png" type="Texture" id=10]
+[ext_resource path="res://assets/introduction/Inside the Planet Diapositiva 5.png" type="Texture" id=11]
+[ext_resource path="res://assets/introduction/Inside the Planet Diapositiva 14.png" type="Texture" id=12]
+[ext_resource path="res://assets/introduction/Inside the Planet Diapositiva 3.png" type="Texture" id=13]
+[ext_resource path="res://assets/introduction/Inside the Planet Diapositiva 12.png" type="Texture" id=14]
+[ext_resource path="res://assets/introduction/Inside the Planet Diapositiva 11.png" type="Texture" id=15]
+[ext_resource path="res://assets/introduction/Inside the Planet Diapositiva 6.png" type="Texture" id=16]
+[ext_resource path="res://assets/introduction/Inside the Planet Diapositiva 7.png" type="Texture" id=17]
+[ext_resource path="res://assets/introduction/Inside the Planet Diapositiva 9.png" type="Texture" id=18]
+[ext_resource path="res://assets/introduction/Inside the Planet Diapositiva 1.png" type="Texture" id=19]
+[ext_resource path="res://assets/introduction/Inside the Planet Diapositiva 10.png" type="Texture" id=20]
+[ext_resource path="res://assets/introduction/Inside the Planet Diapositiva 8.png" type="Texture" id=21]
+[ext_resource path="res://scenes/hud/hud_introduction/HUDIntroduction.tscn" type="PackedScene" id=22]
 
 [sub_resource type="ParticlesMaterial" id=1]
 emission_shape = 2
@@ -39,6 +54,9 @@ entry_point_scene = ExtResource( 3 )
 hud_title_screen = ExtResource( 5 )
 hud_level = ExtResource( 6 )
 player = ExtResource( 7 )
+hud_introduction = ExtResource( 22 )
+introduction_slides = [ ExtResource( 19 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 21 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 9 ), ExtResource( 12 ) ]
+is_cheat_skip_introduction = false
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 992, 544 )
