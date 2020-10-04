@@ -63,6 +63,10 @@ func _on_Level_selected(index_level):
 	add_child(current_level_instance)
 	current_level_instance.hide()
 	
+	if current_level_instance.type == "dark":
+		player_instance.toggle_light(true)
+	else:
+		player_instance.toggle_light(false)
 	player_instance.reset_player()
 	#player_instance.position = get_node("Level/PlayerStartPosition").global_position
 	player_instance.start_transition_between_levels(current_level_instance.get_node("PlayerStartPosition").global_position, transition_time)

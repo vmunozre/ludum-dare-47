@@ -8,7 +8,7 @@
 [ext_resource path="res://scenes/hud/hud_level/HUDLevel.tscn" type="PackedScene" id=6]
 [ext_resource path="res://entities/player/Player.tscn" type="PackedScene" id=7]
 
-[sub_resource type="ParticlesMaterial" id=2]
+[sub_resource type="ParticlesMaterial" id=1]
 emission_shape = 2
 emission_box_extents = Vector3( 1000, 1, 1 )
 flag_disable_z = true
@@ -20,7 +20,7 @@ orbit_velocity_random = 0.0
 scale = 0.1
 scale_random = 1.0
 
-[sub_resource type="ParticlesMaterial" id=1]
+[sub_resource type="ParticlesMaterial" id=2]
 emission_shape = 2
 emission_box_extents = Vector3( 1200, 1, 1 )
 flag_disable_z = true
@@ -54,9 +54,9 @@ scale = Vector2( 0.0275862, 0.0454545 )
 emitting = false
 amount = 6
 lifetime = 25.0
-preprocess = 20.0
-visibility_rect = Rect2( -949.645, -0.515221, 1677.36, 1565.85 )
-process_material = SubResource( 2 )
+preprocess = 25.0
+visibility_rect = Rect2( -692.622, -0.693263, 1577.23, 1565.3 )
+process_material = SubResource( 1 )
 texture = ExtResource( 4 )
 
 [node name="Stars" type="Particles2D" parent="Background"]
@@ -65,10 +65,10 @@ scale = Vector2( 0.0275862, 0.0454545 )
 emitting = false
 amount = 100
 lifetime = 25.0
-preprocess = 20.0
+preprocess = 25.0
 fract_delta = false
-visibility_rect = Rect2( -1199.93, -0.999359, 2396.56, 1449.95 )
-process_material = SubResource( 1 )
+visibility_rect = Rect2( -1188.61, -0.987091, 2384.8, 1566.4 )
+process_material = SubResource( 2 )
 
 [node name="Panel" type="Panel" parent="."]
 visible = false

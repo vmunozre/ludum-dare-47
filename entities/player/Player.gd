@@ -124,6 +124,9 @@ func reset_player():
 		rotation = 0
 		is_jumping = false
 
+func toggle_light(state):
+	$Light2D.enabled = state
+
 func start_transition_between_levels(final_position, transition_time, max_scale=50, rotation_rate_transition=-4):
 		start_position = final_position
 		var time_peak = transition_time / 2
