@@ -1,10 +1,112 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/hud/hud_title_screen/HUDLevelItem.gd" type="Script" id=1]
-[ext_resource path="res://theme/theme.tres" type="Theme" id=2]
+[ext_resource path="res://theme/Astronauta Script.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://theme/Button_600x50.png" type="Texture" id=3]
 
 [sub_resource type="StreamTexture" id=1]
 load_path = "res://.import/level1_preview.png-c2cca55cc7837123cc6da69444a95e71.stex"
+
+[sub_resource type="DynamicFont" id=10]
+size = 30
+outline_size = 1
+outline_color = Color( 0.85098, 0.443137, 0.00392157, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.075, 0.5, 0.5, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.101961, 0.52549, 0.576471, 1 )
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0.00779999, 0.30719, 0.39, 1 )
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.2736, 0.72, 0.72, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.101961, 0.52549, 0.576471, 1 )
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0.00779999, 0.30719, 0.39, 1 )
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.054902, 0.415686, 0.482353, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.101961, 0.52549, 0.576471, 1 )
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0.505882, 0.658824, 0.701961, 1 )
+shadow_size = 1
+
+[sub_resource type="BitmapFont" id=5]
+
+[sub_resource type="BitmapFont" id=6]
+
+[sub_resource type="DynamicFont" id=9]
+size = 30
+outline_size = 1
+outline_color = Color( 0.27451, 0.14902, 0.00392157, 1 )
+use_filter = true
+extra_spacing_char = 3
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.145098, 0.301961, 0.301961, 0.286275 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=8]
+size = 26
+font_data = ExtResource( 2 )
+
+[sub_resource type="Theme" id=11]
+default_font = SubResource( 8 )
+Button/colors/font_color = Color( 1, 0.890196, 0.168627, 1 )
+Button/colors/font_color_disabled = Color( 0.901961, 0.901961, 0.901961, 0.2 )
+Button/colors/font_color_hover = Color( 0.9, 0.774, 0.54, 1 )
+Button/colors/font_color_pressed = Color( 0.9, 0.5913, 0.018, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = SubResource( 10 )
+Button/styles/disabled = null
+Button/styles/focus = null
+Button/styles/hover = SubResource( 2 )
+Button/styles/normal = SubResource( 3 )
+Button/styles/pressed = SubResource( 4 )
+Fonts/fonts/large = SubResource( 5 )
+Fonts/fonts/normal = SubResource( 6 )
+Label/colors/font_color = Color( 1, 0.937255, 0, 1 )
+Label/colors/font_color_shadow = Color( 0.28125, 0.191162, 0, 1 )
+Label/colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+Label/constants/line_spacing = 0
+Label/constants/shadow_as_outline = 0
+Label/constants/shadow_offset_x = 0
+Label/constants/shadow_offset_y = 0
+Label/fonts/font = SubResource( 9 )
+Label/styles/normal = null
+Panel/styles/panel = SubResource( 7 )
+ScrollContainer/styles/bg = null
 
 [node name="LevelItem" type="MarginContainer"]
 margin_right = 700.0
@@ -59,15 +161,27 @@ custom_constants/margin_top = 50
 custom_constants/margin_left = 50
 custom_constants/margin_bottom = 50
 
-[node name="Button" type="Button" parent="HBoxContainer/MarginButton"]
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/MarginButton"]
 margin_left = 50.0
 margin_top = 50.0
 margin_right = 460.0
 margin_bottom = 100.0
 size_flags_horizontal = 3
-theme = ExtResource( 2 )
-text = "Pepe de los palotes"
+texture_normal = ExtResource( 3 )
+expand = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="HBoxContainer/MarginButton/TextureButton"]
+margin_right = 408.0
+margin_bottom = 38.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme = SubResource( 11 )
+text = "Pepito de los palotes"
+align = 1
+valign = 1
+clip_text = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="HBoxContainer/MarginButton/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="HBoxContainer/MarginButton/TextureButton" to="." method="_on_Button_pressed"]
