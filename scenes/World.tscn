@@ -1,10 +1,37 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/World.gd" type="Script" id=1]
+[ext_resource path="res://assets/tiles/scene_tiles.png" type="Texture" id=2]
 [ext_resource path="res://scenes/title_screen/TitleScreen.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/textures/extras/planet.png" type="Texture" id=4]
 [ext_resource path="res://scenes/hud/hud_title_screen/HUDTitleScreen.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/hud/hud_level/HUDLevel.tscn" type="PackedScene" id=6]
 [ext_resource path="res://entities/player/Player.tscn" type="PackedScene" id=7]
+
+[sub_resource type="ParticlesMaterial" id=2]
+emission_shape = 2
+emission_box_extents = Vector3( 1000, 1, 1 )
+flag_disable_z = true
+gravity = Vector3( 0, 5, 0 )
+angular_velocity = 15.0
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 0.1
+scale_random = 1.0
+
+[sub_resource type="ParticlesMaterial" id=1]
+emission_shape = 2
+emission_box_extents = Vector3( 1200, 1, 1 )
+flag_disable_z = true
+gravity = Vector3( 0, 5, 0 )
+angular_velocity = 10.0
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 10.0
+scale_random = 1.0
+color = Color( 0.811765, 0.945098, 0.894118, 1 )
 
 [node name="World" type="Node"]
 script = ExtResource( 1 )
@@ -13,7 +40,38 @@ hud_title_screen = ExtResource( 5 )
 hud_level = ExtResource( 6 )
 player = ExtResource( 7 )
 
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 992, 544 )
+scale = Vector2( 36.25, 22 )
+z_index = -11
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 277, 7, 64, 64 )
+
+[node name="Planets" type="Particles2D" parent="Background"]
+position = Vector2( -0.882751, -40.3636 )
+scale = Vector2( 0.0275862, 0.0454545 )
+emitting = false
+amount = 6
+lifetime = 25.0
+preprocess = 20.0
+visibility_rect = Rect2( -949.645, -0.515221, 1677.36, 1565.85 )
+process_material = SubResource( 2 )
+texture = ExtResource( 4 )
+
+[node name="Stars" type="Particles2D" parent="Background"]
+position = Vector2( -0.882751, -31.6364 )
+scale = Vector2( 0.0275862, 0.0454545 )
+emitting = false
+amount = 100
+lifetime = 25.0
+preprocess = 20.0
+fract_delta = false
+visibility_rect = Rect2( -1199.93, -0.999359, 2396.56, 1449.95 )
+process_material = SubResource( 1 )
+
 [node name="Panel" type="Panel" parent="."]
+visible = false
 margin_right = 1920.0
 margin_bottom = 1080.0
 __meta__ = {

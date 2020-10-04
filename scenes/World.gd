@@ -22,7 +22,8 @@ var player_instance
 func _ready():
 	
 	GameManager.world = self
-	
+	$Background/Planets.emitting = true
+	$Background/Stars.emitting = true
 	#Loading title screen "level"
 	current_level_instance = entry_point_scene.instance()
 	current_level_instance.position = $LevelStartPosition.position
