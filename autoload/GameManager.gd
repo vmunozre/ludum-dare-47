@@ -19,7 +19,8 @@ func load_next_level():
 	var index_level = levels_unlocked.find(actual_level_name, 0)
 	var next_level = index_level + 1
 	if index_level >= -1 and next_level < levels_unlocked.size():
-		world.load_new_level(index_level+1)
+		world.load_new_level(next_level)
+		actual_level_name.queue_free()
 		return
 	else:
 		for i in scenes.size():
@@ -27,8 +28,10 @@ func load_next_level():
 			if not is_level_unlocked(lvl):
 				levels_unlocked.append(lvl.level_name)
 				world.load_new_level(i)
+				lvl.queue_free()
 				return
 			else:
+				lvl.queue_free()
 				print("Level " + lvl.level_name + " is already unlocke")
 	world.go_home()
 

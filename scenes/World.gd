@@ -49,6 +49,7 @@ func _ready():
 	add_child(player_instance)
 
 func load_new_level(index_level):
+	player_instance.toggle_light(false)
 	_on_Level_selected(index_level)
 
 func _on_Level_selected(index_level):
@@ -86,6 +87,7 @@ func _on_Restart_level():
 	pass
 
 func go_home():
+	player_instance.toggle_light(false)
 	_on_Change_level()
 	
 func _on_Change_level():
@@ -126,7 +128,7 @@ func load_levels():
 		var lvl = GameManager.scenes[i].instance()
 		if GameManager.is_level_unlocked(lvl):
 			current_hud_instance.add_level_item(i, GameManager.scene_thumbnails[i], GameManager.scene_texts[i])
-
+		lvl.queue_free()
 func _on_TimerLoadHUDInstance_timeout():
 	if is_title_screen:
 		#Loading title screen HUD

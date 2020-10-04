@@ -55,6 +55,7 @@ emitting = false
 amount = 6
 lifetime = 25.0
 preprocess = 25.0
+fract_delta = false
 visibility_rect = Rect2( -692.622, -0.693263, 1577.23, 1565.3 )
 process_material = SubResource( 1 )
 texture = ExtResource( 4 )
