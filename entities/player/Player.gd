@@ -110,11 +110,11 @@ func manage_death():
 	set_collision_mask_bit(0, false)
 	speed = 0
 	SoundManager.play(SoundManager.lose_sound)
-	yield($AnimationPlayer,"animation_finished")
-	rotation = 0
 	if keys.size() > 0:
 		keys = []
 		GameManager.world.add_key()
+	yield($AnimationPlayer,"animation_finished")
+	rotation = 0
 	
 	is_ghost = true
 
