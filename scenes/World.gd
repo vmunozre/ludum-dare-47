@@ -156,7 +156,7 @@ func load_levels():
 		for i in GameManager.scenes.size():
 				var lvl = GameManager.scenes[i].instance()
 				if GameManager.is_level_unlocked(lvl):
-						current_hud_instance.add_level_item(i, GameManager.scene_thumbnails[i], GameManager.scene_texts[i])
+						current_hud_instance.add_level_item(i, GameManager.scene_texts[i])
 				lvl.queue_free()
 func _on_TimerLoadHUDInstance_timeout():
 		if is_title_screen:
@@ -189,4 +189,12 @@ func load_the_end():
 	remove_child(current_hud_instance)
 	remove_child(current_level_instance)
 	current_hud_instance = hud_the_end.instance()
+	current_hud_instance.type = current_hud_instance.TYPE_THE_END
+	add_child(current_hud_instance)
+
+func load_about():
+	remove_child(current_hud_instance)
+	remove_child(current_level_instance)
+	current_hud_instance = hud_the_end.instance()
+	current_hud_instance.type = current_hud_instance.TYPE_ABOUT
 	add_child(current_hud_instance)

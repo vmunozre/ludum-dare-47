@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/beta.png-9fb78d412ea857f24614d5f46514388e.stex"
+path="res://.import/social_moku_victor.png-327b81d14c0878c6bd19358a3abbe19e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/tilesets/beta.png"
-dest_files=[ "res://.import/beta.png-9fb78d412ea857f24614d5f46514388e.stex" ]
+source_file="res://assets/textures/hud/social_moku_victor.png"
+dest_files=[ "res://.import/social_moku_victor.png-327b81d14c0878c6bd19358a3abbe19e.stex" ]
 
 [params]
 
@@ -24,11 +24,11 @@ flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
-process/fix_alpha_border=true
+process/fix_alpha_border=false
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
