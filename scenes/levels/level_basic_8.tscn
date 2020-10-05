@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/basic_level/Basic_level.tscn" type="PackedScene" id=1]
+[ext_resource path="res://entities/enemies/Enemy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://entities/enemies/Spike_Trap.tscn" type="PackedScene" id=3]
+[ext_resource path="res://entities/enemies/Spike_Ball.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/textures/extras/background_10 x15.png" type="Texture" id=5]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array(  )
+}
+
+[node name="level_basic_8" instance=ExtResource( 1 )]
+level_name = "basic_8"
+
+[node name="TileMap" parent="." index="0"]
+tile_data = PoolIntArray( -262151, 14, 0, -262150, 7, 0, -262149, 7, 0, -262148, 7, 0, -262147, 7, 0, -262146, 7, 0, -262145, 7, 0, -327680, 7, 0, -327679, 7, 0, -327678, 7, 0, -327677, 7, 0, -327676, 7, 0, -327675, 7, 0, -327674, 15, 0, -196616, 10, 0, -196615, 33, 0, -262138, 34, 0, -262137, 11, 0, -131080, 5, 0, -196601, 4, 0, -65544, 5, 0, -131072, 16, 0, -131065, 4, 0, -8, 5, 0, -5, 32, 0, -4, 27, 0, -3, 26, 0, -65529, 4, 0, 65528, 5, 0, 65531, 31, 0, 65532, 28, 0, 65533, 25, 0, 2, 23, 0, 3, 21, 0, 7, 4, 0, 131064, 5, 0, 131067, 30, 0, 131068, 29, 0, 131069, 24, 0, 65543, 4, 0, 196600, 5, 0, 131079, 4, 0, 262136, 8, 0, 262137, 35, 0, 196614, 36, 0, 196615, 9, 0, 327673, 12, 0, 327674, 6, 0, 327675, 6, 0, 327676, 6, 0, 327677, 6, 0, 327678, 6, 0, 327679, 6, 0, 262144, 6, 0, 262145, 6, 0, 262146, 6, 0, 262147, 6, 0, 262148, 6, 0, 262149, 6, 0, 262150, 13, 0 )
+
+[node name="TileMapExtras" parent="." index="2"]
+tile_data = PoolIntArray( -262152, 50, 0, -327673, 51, 0, 327672, 48, 0, 262151, 49, 0 )
+
+[node name="Background" parent="." index="3"]
+scale = Vector2( 15, 10 )
+
+[node name="Detailed_background" parent="." index="4"]
+texture = ExtResource( 5 )
+
+[node name="PlayerStartPosition" parent="." index="5"]
+position = Vector2( -30.7013, 237.394 )
+
+[node name="KeyPosition" parent="." index="6"]
+position = Vector2( -286.99, -82.6155 )
+
+[node name="Key" parent="." index="7"]
+position = Vector2( -285.656, -81.2806 )
+
+[node name="Door" parent="." index="8"]
+position = Vector2( 212.402, -31.2891 )
+
+[node name="Spike_Trap" parent="." index="9" instance=ExtResource( 3 )]
+position = Vector2( 101.448, -240.271 )
+rotation = 3.14159
+
+[node name="Spike_Trap3" parent="." index="10" instance=ExtResource( 3 )]
+position = Vector2( 153.506, 240.271 )
+
+[node name="Enemy" parent="." index="11" instance=ExtResource( 2 )]
+position = Vector2( -190.882, -90.7691 )
+
+[node name="Enemy2" parent="." index="12" instance=ExtResource( 2 )]
+position = Vector2( -65.4071, -230.927 )
+rotation = 3.14159
+
+[node name="Spike_Trap2" parent="." index="13" instance=ExtResource( 3 )]
+position = Vector2( -335.045, 61.4026 )
+rotation = 4.71239
+
+[node name="Spike_Ball" parent="." index="14" instance=ExtResource( 4 )]
+position = Vector2( 293.665, -142.828 )
+curve = SubResource( 1 )
