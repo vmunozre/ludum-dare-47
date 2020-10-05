@@ -10,10 +10,10 @@
 script = ExtResource( 1 )
 
 [node name="BackgroundMenu" type="Panel" parent="."]
-margin_left = 25.2449
-margin_top = 28.4492
-margin_right = 251.245
-margin_bottom = 373.449
+margin_left = 25.0
+margin_top = 28.0
+margin_right = 251.0
+margin_bottom = 361.0
 theme = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -21,12 +21,15 @@ __meta__ = {
 
 [node name="RestartLevel" type="TextureButton" parent="BackgroundMenu"]
 margin_left = 12.0
-margin_top = 32.0
+margin_top = 22.7457
 margin_right = 212.0
-margin_bottom = 82.0
+margin_bottom = 72.7457
+focus_mode = 0
+enabled_focus_mode = 0
 texture_normal = ExtResource( 4 )
 expand = true
 __meta__ = {
+"_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
@@ -41,11 +44,16 @@ autowrap = true
 
 [node name="ChangeLevel" type="TextureButton" parent="BackgroundMenu"]
 margin_left = 12.0
-margin_top = 122.0
+margin_top = 97.9387
 margin_right = 212.0
-margin_bottom = 172.0
+margin_bottom = 147.939
+focus_mode = 0
+enabled_focus_mode = 0
 texture_normal = ExtResource( 4 )
 expand = true
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Label" type="Label" parent="BackgroundMenu/ChangeLevel"]
 margin_right = 200.0
@@ -58,12 +66,15 @@ autowrap = true
 
 [node name="Quit" type="TextureButton" parent="BackgroundMenu"]
 margin_left = 12.0
-margin_top = 212.0
+margin_top = 177.451
 margin_right = 212.0
-margin_bottom = 262.0
+margin_bottom = 227.451
+focus_mode = 0
+enabled_focus_mode = 0
 texture_normal = ExtResource( 4 )
 expand = true
 __meta__ = {
+"_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
@@ -75,19 +86,28 @@ text = "Quit"
 align = 1
 valign = 1
 autowrap = true
-
-[node name="Mute" type="TextureButton" parent="BackgroundMenu"]
-margin_left = 22.2449
-margin_top = 284.286
-margin_right = 67.2449
-margin_bottom = 328.286
-focus_mode = 0
-enabled_focus_mode = 0
-texture_normal = ExtResource( 5 )
-expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Mute" type="TextureButton" parent="BackgroundMenu"]
+margin_left = 12.0
+margin_top = 258.106
+margin_right = 212.0
+margin_bottom = 308.106
+focus_mode = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="BackgroundMenu/Mute"]
+position = Vector2( 102.154, 23.6311 )
+scale = Vector2( 0.369334, 0.308845 )
+texture = ExtResource( 5 )
 
 [node name="BackgroundInventory" type="Panel" parent="."]
 visible = false
