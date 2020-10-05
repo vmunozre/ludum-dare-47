@@ -32,8 +32,8 @@ func _ready():
 		load_introduction(true)
 
 func _process(delta):
-	if Input.is_action_just_pressed("the_end"):
-		load_the_end()
+	if Input.is_action_just_pressed("unlock"):
+		GameManager.is_cheat_all_levels_activated = true
 func _on_Introduction_finished():
 		remove_child(current_hud_instance)
 		#Starting game

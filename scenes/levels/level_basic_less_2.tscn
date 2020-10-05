@@ -1,0 +1,134 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/basic_level/Basic_level.tscn" type="PackedScene" id=1]
+[ext_resource path="res://entities/enemies/Spike_Trap.tscn" type="PackedScene" id=2]
+
+[node name="level_basic_less_2" instance=ExtResource( 1 )]
+level_name = "level_basic_less_2"
+
+[node name="TileMap" parent="." index="0"]
+tile_data = PoolIntArray( -327685, 14, 0, -327684, 7, 0, -327683, 7, 0, -327682, 7, 0, -327681, 7, 0, -393216, 7, 0, -393215, 7, 0, -393214, 7, 0, -393213, 7, 0, -393212, 15, 0, -262150, 10, 0, -262149, 33, 0, -327676, 34, 0, -327675, 11, 0, -196614, 5, 0, -262139, 4, 0, -131078, 5, 0, -131075, 23, 0, -131074, 22, 0, -131073, 22, 0, -196608, 21, 0, -196606, 16, 0, -196603, 4, 0, -65542, 5, 0, -131067, 4, 0, -6, 5, 0, -2, 16, 0, -65531, 4, 0, 65530, 5, 0, 1, 32, 0, 2, 26, 0, 5, 4, 0, 131066, 5, 0, 131069, 32, 0, 131070, 26, 0, 65537, 31, 0, 65538, 25, 0, 65541, 4, 0, 196602, 5, 0, 196605, 30, 0, 196606, 24, 0, 131073, 31, 0, 131074, 25, 0, 131077, 4, 0, 262138, 5, 0, 196609, 30, 0, 196610, 24, 0, 196613, 4, 0, 327674, 8, 0, 327675, 35, 0, 262148, 36, 0, 262149, 9, 0, 393211, 12, 0, 393212, 6, 0, 393213, 6, 0, 393214, 6, 0, 393215, 6, 0, 327680, 6, 0, 327681, 6, 0, 327682, 6, 0, 327683, 6, 0, 327684, 13, 0 )
+
+[node name="TileMapExtras" parent="." index="2"]
+tile_data = PoolIntArray( -327686, 50, 0, -327685, 1, 0, -327682, 16, 0, -393215, 17, 0, -393212, 12, 0, -393211, 51, 0, -262149, 38, 0, -327676, 33, 0, -327675, 17, 0, -196614, 17, 0, -196611, 5, 0, -196610, 54, 0, -196609, 5, 0, -262144, 3, 0, -262142, 4, 0, -196607, 11, 0, -196606, 0, 0, -65539, 8, 0, -65538, 26, 0, -65537, 47, 0, -131072, 6, 0, -131067, 15, 0, -6, 16, 0, -65535, 3, 0, -65534, 55, 0, 65534, 29, 0, 2, 21, 0, 131069, 13, 0, 131070, 16, 0, 131071, 10, 0, 65536, 11, 0, 65538, 1, 0, 65539, 24, 0, 196605, 19, 0, 196607, 24, 0, 131073, 21, 0, 131075, 24, 0, 262138, 16, 0, 262141, 6, 0, 262142, 29, 0, 196609, 12, 0, 196610, 19, 0, 327674, 1, 0, 327675, 43, 0, 327677, 3, 0, 327678, 5, 0, 327679, 5, 0, 262144, 5, 0, 262145, 3, 0, 262146, 47, 0, 262147, 55, 0, 262148, 44, 0, 262149, 15, 0, 393210, 48, 0, 393212, 17, 0, 393214, 15, 0, 327681, 14, 0, 327684, 0, 0, 327685, 49, 0 )
+
+[node name="Background" parent="." index="3"]
+position = Vector2( -4, -3.99998 )
+scale = Vector2( 10.875, 11.125 )
+
+[node name="Detailed_background" parent="." index="4"]
+position = Vector2( -1.33514e-05, 3.8147e-06 )
+scale = Vector2( 1.2362, 1.20502 )
+
+[node name="PlayerStartPosition" parent="." index="5"]
+position = Vector2( -216, 272 )
+
+[node name="KeyPosition" parent="." index="6"]
+position = Vector2( 160.434, -104 )
+
+[node name="Key" parent="." index="7"]
+position = Vector2( 160, -104 )
+
+[node name="Door" parent="." index="8"]
+position = Vector2( -223, 128 )
+rotation = 4.71239
+
+[node name="Spike_Trap2" parent="." index="9" instance=ExtResource( 2 )]
+position = Vector2( 304, 32 )
+rotation = 4.71239
+
+[node name="Spike_Trap3" parent="." index="10" instance=ExtResource( 2 )]
+position = Vector2( 304, 96 )
+rotation = 4.71239
+
+[node name="Spike_Trap9" parent="." index="11" instance=ExtResource( 2 )]
+position = Vector2( 304, 160 )
+rotation = 4.71239
+
+[node name="Spike_Trap10" parent="." index="12" instance=ExtResource( 2 )]
+position = Vector2( 304, 224 )
+rotation = 4.71239
+
+[node name="Spike_Trap4" parent="." index="13" instance=ExtResource( 2 )]
+position = Vector2( 304, -32 )
+rotation = 4.71239
+
+[node name="Spike_Trap5" parent="." index="14" instance=ExtResource( 2 )]
+position = Vector2( 304, -96 )
+rotation = 4.71239
+
+[node name="Spike_Trap6" parent="." index="15" instance=ExtResource( 2 )]
+position = Vector2( 304, -160 )
+rotation = 4.71239
+
+[node name="Spike_Trap7" parent="." index="16" instance=ExtResource( 2 )]
+position = Vector2( 304, -224 )
+rotation = 4.71239
+
+[node name="Spike_Trap8" parent="." index="17" instance=ExtResource( 2 )]
+position = Vector2( -304, -224 )
+rotation = 1.5708
+
+[node name="Spike_Trap11" parent="." index="18" instance=ExtResource( 2 )]
+position = Vector2( -304, -160 )
+rotation = 1.5708
+
+[node name="Spike_Trap12" parent="." index="19" instance=ExtResource( 2 )]
+position = Vector2( -304, -96 )
+rotation = 1.5708
+
+[node name="Spike_Trap13" parent="." index="20" instance=ExtResource( 2 )]
+position = Vector2( -304, -32 )
+rotation = 1.5708
+
+[node name="Spike_Trap14" parent="." index="21" instance=ExtResource( 2 )]
+position = Vector2( -304, 32 )
+rotation = 1.5708
+
+[node name="Spike_Trap15" parent="." index="22" instance=ExtResource( 2 )]
+position = Vector2( -304, 96 )
+rotation = 1.5708
+
+[node name="Spike_Trap16" parent="." index="23" instance=ExtResource( 2 )]
+position = Vector2( -304, 160 )
+rotation = 1.5708
+
+[node name="Spike_Trap17" parent="." index="24" instance=ExtResource( 2 )]
+position = Vector2( -304, 160 )
+rotation = 1.5708
+
+[node name="Spike_Trap18" parent="." index="25" instance=ExtResource( 2 )]
+position = Vector2( -304, 224 )
+rotation = 1.5708
+
+[node name="Spike_Trap19" parent="." index="26" instance=ExtResource( 2 )]
+position = Vector2( -224, -304 )
+rotation = 3.14159
+
+[node name="Spike_Trap20" parent="." index="27" instance=ExtResource( 2 )]
+position = Vector2( -160, -304 )
+rotation = 3.14159
+
+[node name="Spike_Trap21" parent="." index="28" instance=ExtResource( 2 )]
+position = Vector2( -96, -304 )
+rotation = 3.14159
+
+[node name="Spike_Trap22" parent="." index="29" instance=ExtResource( 2 )]
+position = Vector2( -32, -304 )
+rotation = 3.14159
+
+[node name="Spike_Trap23" parent="." index="30" instance=ExtResource( 2 )]
+position = Vector2( 32, -304 )
+rotation = 3.14159
+
+[node name="Spike_Trap24" parent="." index="31" instance=ExtResource( 2 )]
+position = Vector2( 96, -304 )
+rotation = 3.14159
+
+[node name="Spike_Trap25" parent="." index="32" instance=ExtResource( 2 )]
+position = Vector2( 160.434, -304 )
+rotation = 3.14159
+
+[node name="Spike_Trap26" parent="." index="33" instance=ExtResource( 2 )]
+position = Vector2( 224, -304 )
+rotation = 3.14159

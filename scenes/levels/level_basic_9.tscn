@@ -14,26 +14,23 @@ tile_data = PoolIntArray( -262151, 14, 0, -262150, 7, 0, -262149, 7, 0, -262148,
 [node name="TileMapPart2" parent="." index="1"]
 tile_data = PoolIntArray( -327678, 7, 0 )
 
-[node name="TileMapExtras" parent="." index="2"]
-tile_data = PoolIntArray( -262152, 50, 0, -327673, 51, 0, 327672, 48, 0, 262151, 49, 0 )
+[node name="TileMapExtras" parent="." index="3"]
+tile_data = PoolIntArray( -262152, 50, 0, -262151, 15, 0, -262149, 22, 0, -262147, 16, 0, -262146, 17, 0, -327680, 1, 0, -327679, 17, 0, -327677, 15, 0, -327675, 12, 0, -327673, 51, 0, -196616, 1, 0, -196615, 34, 0, -196614, 26, 0, -196613, 3, 0, -196612, 3, 0, -196611, 6, 0, -196610, 4, 0, -196609, 26, 0, -262144, 8, 0, -262143, 26, 0, -262142, 32, 0, -262141, 9, 0, -262140, 8, 0, -262139, 29, 0, -262138, 33, 0, -262137, 0, 0, -131079, 31, 0, -131077, 1, 0, -131076, 23, 0, -131074, 0, 0, -196608, 30, 0, -196607, 12, 0, -196604, 30, 0, -196603, 0, 0, -196602, 27, 0, -196601, 17, 0, -65544, 17, 0, -65543, 27, 0, -65542, 6, 0, -65541, 32, 0, -65538, 7, 0, -131066, 30, 0, -6, 55, 0, -5, 30, 0, -65535, 4, 0, -65533, 3, 0, -65532, 30, 0, -65530, 27, 0, -65529, 22, 0, 65528, 16, 0, 65529, 31, 0, 65530, 0, 0, 65531, 11, 0, 65532, 31, 0, 65533, 31, 0, 2, 1, 0, 4, 27, 0, 5, 6, 0, 6, 30, 0, 7, 17, 0, 131064, 23, 0, 131065, 53, 0, 131068, 29, 0, 131070, 25, 0, 65536, 31, 0, 65537, 32, 0, 65538, 9, 0, 65539, 8, 0, 65541, 55, 0, 65542, 25, 0, 196600, 16, 0, 196601, 30, 0, 196604, 31, 0, 196606, 30, 0, 131074, 23, 0, 131077, 1, 0, 131078, 30, 0, 131079, 15, 0, 262136, 12, 0, 262137, 43, 0, 262138, 9, 0, 262139, 4, 0, 262140, 2, 0, 262141, 55, 0, 262142, 3, 0, 262143, 32, 0, 196608, 3, 0, 196610, 4, 0, 196612, 54, 0, 196613, 32, 0, 196614, 44, 0, 327672, 48, 0, 327674, 15, 0, 327675, 1, 0, 327677, 16, 0, 327678, 23, 0, 262144, 0, 0, 262145, 15, 0, 262148, 15, 0, 262149, 17, 0, 262150, 1, 0, 262151, 49, 0 )
 
-[node name="Background" parent="." index="3"]
+[node name="Background" parent="." index="4"]
 scale = Vector2( 14.7, 10 )
 
-[node name="Detailed_background" parent="." index="4"]
+[node name="Detailed_background" parent="." index="5"]
 texture = ExtResource( 4 )
 
-[node name="PlayerStartPosition" parent="." index="5"]
+[node name="PlayerStartPosition" parent="." index="6"]
 position = Vector2( 46.7194, 221.375 )
 
-[node name="KeyPosition" parent="." index="6"]
+[node name="KeyPosition" parent="." index="7"]
 position = Vector2( -78.4523, 123.348 )
 
-[node name="Key" parent="." index="7"]
+[node name="Key" parent="." index="8"]
 position = Vector2( -81.1219, 126.018 )
-
-[node name="Door" parent="." index="8"]
-position = Vector2( 161.678, -28.6194 )
 
 [node name="Enemy" parent="." index="9" instance=ExtResource( 2 )]
 position = Vector2( 221.887, 228.801 )
@@ -44,3 +41,6 @@ position = Vector2( -316.194, 112.874 )
 [node name="Spike_Trap2" parent="." index="11" instance=ExtResource( 1 )]
 position = Vector2( 304.506, -67.3298 )
 rotation = 4.71239
+
+[node name="Door" parent="." index="12"]
+position = Vector2( 161.678, -28.6194 )

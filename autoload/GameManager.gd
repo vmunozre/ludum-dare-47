@@ -5,7 +5,7 @@ var levels_unlocked = ["tutorial_1"] # Add basic levels or load unlocked
 export (Array, PackedScene) var scenes
 export (Array, String) var scene_texts
 export (bool) var is_cheat_all_levels_activated
-export (String) var LAST_LEVEL_NAME = "basic_5"
+export (String) var LAST_LEVEL_NAME = "basic_level_less_0"
 
 var is_all_unlocked = false
 

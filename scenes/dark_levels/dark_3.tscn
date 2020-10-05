@@ -1,33 +1,69 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/basic_dark_level/basic_dark_level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/textures/extras/background_10 x12.png" type="Texture" id=2]
+[ext_resource path="res://entities/enemies/Enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://entities/mushroom/mushroom_1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://entities/mushroom/mushroom_2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://entities/enemies/Spike_Trap.tscn" type="PackedScene" id=6]
+[ext_resource path="res://entities/enemies/Spike_Ball.tscn" type="PackedScene" id=7]
 
 [sub_resource type="StreamTexture" id=1]
 load_path = "res://.import/scene_tiles.png-6aca9d45a15dd49eb1ff8d25ec00a0f2.stex"
 
+[sub_resource type="Curve2D" id=2]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -72, 1.52588e-05, 0, 0, 0, 0, -8, 0, 0, 0, 0, 0, 56, 1.52588e-05, 0, 0, 0, 0, -7.99998, 88, 0, 0, 0, 0, -72, 1.52588e-05 )
+}
+
 [node name="basic_dark_level_3" instance=ExtResource( 1 )]
 level_name = "dark_3"
 
-[node name="Detailed_background" parent="." index="0"]
+[node name="Enemy" parent="." index="0" instance=ExtResource( 3 )]
+position = Vector2( 224, 32 )
+
+[node name="Detailed_background" parent="." index="1"]
 texture = ExtResource( 2 )
 
-[node name="Background" parent="." index="1"]
+[node name="Background" parent="." index="2"]
 scale = Vector2( 11.7, 10 )
 texture = SubResource( 1 )
 
-[node name="KeyPosition" parent="." index="3"]
+[node name="KeyPosition" parent="." index="4"]
 position = Vector2( 160.181, -41.38 )
 
-[node name="Key" parent="." index="4"]
+[node name="Key" parent="." index="5"]
 position = Vector2( 161.516, -42.5703 )
 
-[node name="Door" parent="." index="5"]
-position = Vector2( -161.353, -32.624 )
+[node name="Door" parent="." index="6"]
+position = Vector2( -176, -34 )
 rotation = 3.14159
 
-[node name="TileMap" parent="." index="6"]
-tile_data = PoolIntArray( -262149, 14, 0, -262148, 7, 0, -262147, 7, 0, -262146, 7, 0, -262145, 7, 0, -327680, 7, 0, -327679, 7, 0, -327678, 7, 0, -327677, 7, 0, -327676, 15, 0, -196614, 10, 0, -196613, 33, 0, -262144, 34, 0, -262142, 33, 0, -262140, 34, 0, -262139, 11, 0, -131078, 5, 0, -196603, 4, 0, -65542, 5, 0, -65540, 23, 0, -65539, 22, 0, -65538, 21, 0, -131070, 16, 0, -131067, 4, 0, -6, 5, 0, -65531, 4, 0, 65530, 5, 0, 0, 18, 0, 5, 4, 0, 131066, 5, 0, 65536, 20, 0, 65539, 16, 0, 65541, 4, 0, 196602, 5, 0, 131077, 4, 0, 262138, 8, 0, 262139, 35, 0, 262141, 36, 0, 262143, 35, 0, 196612, 36, 0, 196613, 9, 0, 327675, 12, 0, 327676, 6, 0, 327677, 6, 0, 327678, 6, 0, 327679, 6, 0, 262144, 6, 0, 262145, 6, 0, 262146, 6, 0, 262147, 6, 0, 262148, 13, 0 )
+[node name="TileMap" parent="." index="7"]
+tile_data = PoolIntArray( -262149, 14, 0, -262148, 7, 0, -262147, 7, 0, -262146, 7, 0, -262145, 7, 0, -327680, 11, 0, -327679, 28, 0, -327678, 10, 0, -327677, 7, 0, -327676, 15, 0, -196614, 10, 0, -196613, 33, 0, -262144, 34, 0, -262143, 7, 0, -262142, 33, 0, -262140, 34, 0, -262139, 11, 0, -131078, 5, 0, -196603, 4, 0, -65542, 5, 0, -65540, 23, 0, -65539, 21, 0, -131070, 16, 0, -131067, 4, 0, -6, 5, 0, -65531, 4, 0, 65530, 5, 0, 0, 18, 0, 5, 4, 0, 131066, 5, 0, 65536, 20, 0, 65539, 16, 0, 65541, 4, 0, 196602, 5, 0, 131077, 4, 0, 262138, 8, 0, 262139, 35, 0, 262141, 36, 0, 262142, 6, 0, 262143, 35, 0, 196612, 36, 0, 196613, 9, 0, 327675, 12, 0, 327676, 6, 0, 327677, 9, 0, 327678, 28, 0, 327679, 8, 0, 262144, 6, 0, 262145, 6, 0, 262146, 6, 0, 262147, 6, 0, 262148, 13, 0 )
 
-[node name="TileMapExtras" parent="." index="7"]
-tile_data = PoolIntArray( -131078, 50, 0, -196603, 51, 0, 458746, 48, 0, 393221, 49, 0 )
+[node name="TileMapExtras" parent="." index="8"]
+position = Vector2( 0, -128 )
+tile_data = PoolIntArray( -131078, 50, 0, -131077, 1, 0, -131076, 16, 0, -131074, 15, 0, -131073, 22, 0, -196607, 22, 0, -196605, 0, 0, -196604, 15, 0, -196603, 51, 0, -65542, 16, 0, -65541, 34, 0, -65540, 32, 0, -65539, 8, 0, -65538, 9, 0, -65537, 7, 0, -131071, 16, 0, -131069, 9, 0, -131068, 33, 0, -131067, 23, 0, -6, 0, 0, -65535, 32, 0, -65534, 4, 0, -65532, 30, 0, -65531, 15, 0, 65531, 27, 0, 65533, 0, 0, 2, 23, 0, 4, 30, 0, 131066, 16, 0, 131068, 6, 0, 65536, 4, 0, 65540, 28, 0, 65541, 16, 0, 196602, 0, 0, 196603, 31, 0, 262143, 25, 0, 196608, 0, 0, 196612, 11, 0, 327674, 16, 0, 327675, 27, 0, 327678, 2, 0, 262144, 6, 0, 262147, 29, 0, 262148, 28, 0, 393210, 23, 0, 393211, 43, 0, 393212, 2, 0, 393214, 17, 0, 327680, 3, 0, 327681, 5, 0, 327682, 4, 0, 327683, 5, 0, 327684, 44, 0, 327685, 15, 0, 458746, 48, 0, 458747, 17, 0, 458749, 0, 0, 458750, 19, 0, 393217, 15, 0, 393219, 1, 0, 393220, 1, 0, 393221, 49, 0 )
+
+[node name="CanvasModulate" parent="." index="9"]
+visible = true
+
+[node name="Mushroom" parent="." index="10" instance=ExtResource( 4 )]
+position = Vector2( -288, 72 )
+rotation = 1.5708
+
+[node name="Mushroom2" parent="." index="11" instance=ExtResource( 5 )]
+position = Vector2( -224, -159 )
+
+[node name="Mushroom3" parent="." index="12" instance=ExtResource( 5 )]
+position = Vector2( -32, 64 )
+rotation = 4.71239
+
+[node name="Spike_Trap" parent="." index="13" instance=ExtResource( 6 )]
+position = Vector2( 80, 72 )
+rotation = 1.5708
+
+[node name="Spike_Ball" parent="." index="14" instance=ExtResource( 7 )]
+position = Vector2( -168, 40 )
+curve = SubResource( 2 )
