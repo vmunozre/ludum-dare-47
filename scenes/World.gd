@@ -10,6 +10,7 @@ export (PackedScene) var hud_title_screen
 export (PackedScene) var hud_level
 export (PackedScene) var player
 export (PackedScene) var hud_introduction
+export (PackedScene) var hud_the_end
 export (Array, Texture) var introduction_slides
 export var transition_time = 2.0
 export var is_cheat_skip_introduction = true
@@ -30,7 +31,9 @@ func _ready():
 				return
 		load_introduction(true)
 
-
+func _process(delta):
+	if Input.is_action_just_pressed("the_end"):
+		load_the_end()
 func _on_Introduction_finished():
 		remove_child(current_hud_instance)
 		#Starting game
@@ -105,6 +108,7 @@ func toggle_light_player():
 						player_instance.toggle_light(false)
 
 func go_home():
+		player_instance.position = $LevelStartPosition.position
 		player_instance.toggle_light(false)
 		_on_Change_level()
 
@@ -180,4 +184,9 @@ func load_introduction(is_first_time):
 	add_child(current_hud_instance)
 	current_hud_instance.connect("introduction_finished", self, "_on_Introduction_finished")
 	current_hud_instance.create_carousel(introduction_slides)
-	print("LOAD introduction")
+
+func load_the_end():
+	remove_child(current_hud_instance)
+	remove_child(current_level_instance)
+	current_hud_instance = hud_the_end.instance()
+	add_child(current_hud_instance)

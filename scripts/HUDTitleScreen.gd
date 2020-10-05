@@ -30,4 +30,4 @@ func _on_MuteTextureButton_pressed():
 
 
 func _on_TutorialTextureButton_pressed():
-	GameManager.world.load_introduction()
+	GameManager.world.load_introduction(false)
