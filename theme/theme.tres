@@ -1,10 +1,9 @@
 [gd_resource type="Theme" load_steps=11 format=2]
 
-[ext_resource path="res://theme/Astronauta Script.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://theme/CarterOne-Regular.ttf" type="DynamicFontData" id=1]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
-outline_size = 1
 outline_color = Color( 0.85098, 0.443137, 0.00392157, 1 )
 font_data = ExtResource( 1 )
 
@@ -59,11 +58,8 @@ shadow_size = 1
 
 [sub_resource type="DynamicFont" id=7]
 size = 34
-outline_size = 1
 outline_color = Color( 0.27451, 0.14902, 0.00392157, 1 )
 use_filter = true
-extra_spacing_top = 3
-extra_spacing_char = 3
 font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxFlat" id=8]
@@ -79,7 +75,7 @@ font_data = ExtResource( 1 )
 
 [resource]
 default_font = SubResource( 9 )
-Button/colors/font_color = Color( 1, 0.890196, 0.168627, 1 )
+Button/colors/font_color = Color( 0.909804, 0.803922, 0.435294, 1 )
 Button/colors/font_color_disabled = Color( 0.901961, 0.901961, 0.901961, 0.2 )
 Button/colors/font_color_hover = Color( 0.9, 0.774, 0.54, 1 )
 Button/colors/font_color_pressed = Color( 0.9, 0.5913, 0.018, 1 )
@@ -92,7 +88,7 @@ Button/styles/normal = SubResource( 3 )
 Button/styles/pressed = SubResource( 4 )
 Fonts/fonts/large = SubResource( 5 )
 Fonts/fonts/normal = SubResource( 6 )
-Label/colors/font_color = Color( 1, 0.937255, 0, 1 )
+Label/colors/font_color = Color( 0.909804, 0.803922, 0.435294, 1 )
 Label/colors/font_color_shadow = Color( 0.28125, 0.191162, 0, 1 )
 Label/colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 Label/constants/line_spacing = 0
