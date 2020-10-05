@@ -21,14 +21,15 @@ texture_normal = ExtResource( 1 )
 texture_disabled = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="TextureButton"]
-margin_left = 24.4835
-margin_top = 37.4834
-margin_right = 71.4835
-margin_bottom = 82.4834
+margin_left = 1.0
+margin_top = 3.0
+margin_right = 73.0
+margin_bottom = 75.0
 rect_scale = Vector2( 2, 2 )
 theme = ExtResource( 2 )
 text = "OO"
 align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
