@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/basic_dark_level/basic_dark_level.tscn" type="PackedScene" id=1]
+[ext_resource path="res://entities/enemies/Spike_Trap.tscn" type="PackedScene" id=2]
+[ext_resource path="res://entities/enemies/Enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://entities/mushroom/mushroom_1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://entities/mushroom/mushroom_2.tscn" type="PackedScene" id=5]
+
+[node name="dark_2" instance=ExtResource( 1 )]
+level_name = "dark_2"
+
+[node name="KeyPosition" parent="." index="3"]
+position = Vector2( 25.3619, 105.452 )
+
+[node name="Key" parent="." index="4"]
+position = Vector2( 24.0271, 106.932 )
+
+[node name="Door" parent="." index="5"]
+position = Vector2( -148.005, -94.0266 )
+
+[node name="TileMap" parent="." index="6"]
+tile_data = PoolIntArray( -262149, 2, 0, -262148, 14, 0, -262147, 7, 0, -262146, 7, 0, -262145, 7, 0, -327680, 7, 0, -327679, 7, 0, -327678, 7, 0, -327677, 15, 0, -327676, 3, 0, -196613, 10, 0, -196612, 33, 0, -262141, 34, 0, -262140, 11, 0, -131077, 5, 0, -196604, 4, 0, -65541, 5, 0, -131071, 18, 0, -131068, 4, 0, -5, 5, 0, -3, 23, 0, -2, 22, 0, -1, 21, 0, -65535, 19, 0, -65532, 4, 0, 65531, 5, 0, 1, 20, 0, 4, 4, 0, 131067, 5, 0, 65540, 4, 0, 196603, 5, 0, 196607, 23, 0, 131072, 22, 0, 131073, 21, 0, 131076, 4, 0, 262139, 8, 0, 262140, 35, 0, 196611, 36, 0, 196612, 9, 0, 327675, 0, 0, 327676, 12, 0, 327677, 6, 0, 327678, 6, 0, 327679, 6, 0, 262144, 6, 0, 262145, 6, 0, 262146, 6, 0, 262147, 13, 0, 262148, 1, 0 )
+
+[node name="Mushroom3" parent="." index="8" instance=ExtResource( 4 )]
+position = Vector2( -224.09, 144.91 )
+rotation = 1.5708
+
+[node name="Mushroom2" parent="." index="9" instance=ExtResource( 5 )]
+position = Vector2( -58.5703, -95.3614 )
+
+[node name="Mushroom" parent="." index="10" instance=ExtResource( 4 )]
+position = Vector2( 159.008, 14.0954 )
+rotation = 1.5708
+
+[node name="Spike_Trap" parent="." index="11" instance=ExtResource( 2 )]
+position = Vector2( -240.108, 92.851 )
+rotation = 1.5708
+
+[node name="Enemy" parent="." index="12" instance=ExtResource( 3 )]
+position = Vector2( 38.7103, -68.0768 )
+rotation = 4.71239
+
+[node name="CanvasModulate" parent="." index="13"]
+visible = true

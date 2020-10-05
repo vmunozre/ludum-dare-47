@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/basic_dark_level/basic_dark_level.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/textures/extras/background_10 x12.png" type="Texture" id=2]
+
+[sub_resource type="StreamTexture" id=1]
+load_path = "res://.import/scene_tiles.png-6aca9d45a15dd49eb1ff8d25ec00a0f2.stex"
+
+[node name="basic_dark_level_3" instance=ExtResource( 1 )]
+level_name = "dark_3"
+
+[node name="Detailed_background" parent="." index="0"]
+texture = ExtResource( 2 )
+
+[node name="Background" parent="." index="1"]
+scale = Vector2( 11.7, 10 )
+texture = SubResource( 1 )
+
+[node name="KeyPosition" parent="." index="3"]
+position = Vector2( 160.181, -41.38 )
+
+[node name="Key" parent="." index="4"]
+position = Vector2( 161.516, -42.5703 )
+
+[node name="Door" parent="." index="5"]
+position = Vector2( -161.353, -32.624 )
+rotation = 3.14159
+
+[node name="TileMap" parent="." index="6"]
+tile_data = PoolIntArray( -262149, 14, 0, -262148, 7, 0, -262147, 7, 0, -262146, 7, 0, -262145, 7, 0, -327680, 7, 0, -327679, 7, 0, -327678, 7, 0, -327677, 7, 0, -327676, 15, 0, -196614, 10, 0, -196613, 33, 0, -262144, 34, 0, -262142, 33, 0, -262140, 34, 0, -262139, 11, 0, -131078, 5, 0, -196603, 4, 0, -65542, 5, 0, -65540, 23, 0, -65539, 22, 0, -65538, 21, 0, -131070, 16, 0, -131067, 4, 0, -6, 5, 0, -65531, 4, 0, 65530, 5, 0, 0, 18, 0, 5, 4, 0, 131066, 5, 0, 65536, 20, 0, 65539, 16, 0, 65541, 4, 0, 196602, 5, 0, 131077, 4, 0, 262138, 8, 0, 262139, 35, 0, 262141, 36, 0, 262143, 35, 0, 196612, 36, 0, 196613, 9, 0, 327675, 12, 0, 327676, 6, 0, 327677, 6, 0, 327678, 6, 0, 327679, 6, 0, 262144, 6, 0, 262145, 6, 0, 262146, 6, 0, 262147, 6, 0, 262148, 13, 0 )
+
+[node name="TileMapExtras" parent="." index="7"]
+tile_data = PoolIntArray( -131078, 50, 0, -196603, 51, 0, 458746, 48, 0, 393221, 49, 0 )
