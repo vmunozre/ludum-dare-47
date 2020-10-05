@@ -9,7 +9,11 @@ func _ready():
 	change_title()
 	$AnimationPlayer.play("load")
 	yield($AnimationPlayer,"animation_finished")
+	if type == TYPE_THE_END:
+		$AnimationPlayer.play("unlocked")
+		yield($AnimationPlayer,"animation_finished")		
 	$TextureButton.show()
+	$AnimationPlayer.play("moku_idle")
 
 func _on_TextureButton_pressed():
 	GameManager.world.go_home()
