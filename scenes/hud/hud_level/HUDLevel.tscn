@@ -13,7 +13,7 @@ script = ExtResource( 1 )
 margin_left = 25.0
 margin_top = 28.0
 margin_right = 251.0
-margin_bottom = 361.0
+margin_bottom = 273.0
 theme = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -65,6 +65,7 @@ valign = 1
 autowrap = true
 
 [node name="Quit" type="TextureButton" parent="BackgroundMenu"]
+visible = false
 margin_left = 12.0
 margin_top = 177.451
 margin_right = 212.0
@@ -92,9 +93,9 @@ __meta__ = {
 
 [node name="Mute" type="TextureButton" parent="BackgroundMenu"]
 margin_left = 12.0
-margin_top = 258.106
+margin_top = 169.451
 margin_right = 212.0
-margin_bottom = 308.106
+margin_bottom = 219.451
 focus_mode = 0
 enabled_focus_mode = 0
 texture_normal = ExtResource( 4 )
