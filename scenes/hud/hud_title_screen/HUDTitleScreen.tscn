@@ -1,11 +1,14 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/textures/hud/title.png" type="Texture" id=1]
 [ext_resource path="res://assets/icons/icon_mute.png" type="Texture" id=2]
 [ext_resource path="res://theme/Button_200x50.png" type="Texture" id=3]
 [ext_resource path="res://scripts/HUDTitleScreen.gd" type="Script" id=4]
 [ext_resource path="res://theme/theme.tres" type="Theme" id=5]
-[ext_resource path="res://scenes/hud/hud_title_screen/HUDLevelItem.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/hud/hud_title_screen/HUDLvlItem.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/textures/hud/levels_title.png" type="Texture" id=7]
+[ext_resource path="res://assets/textures/hud/btn_square.png" type="Texture" id=8]
+[ext_resource path="res://assets/icons/icon_about.png" type="Texture" id=9]
 
 [sub_resource type="Animation" id=1]
 resource_name = "idle_title"
@@ -88,9 +91,9 @@ __meta__ = {
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 margin_left = 972.0
-margin_top = 213.0
+margin_top = 410.0
 margin_right = 1672.0
-margin_bottom = 872.0
+margin_bottom = 850.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 scroll_horizontal_enabled = false
@@ -98,25 +101,47 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
-margin_right = 700.0
-size_flags_horizontal = 3
-custom_constants/separation = 0
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
+custom_constants/vseparation = 20
+custom_constants/hseparation = 20
+columns = 4
 
 [node name="MuteTextureButton" type="TextureButton" parent="."]
-margin_left = 680.0
+margin_left = 637.723
 margin_top = 725.0
-margin_right = 864.0
+margin_right = 729.723
 margin_bottom = 817.0
-texture_normal = ExtResource( 3 )
+texture_normal = ExtResource( 8 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Sprite" type="Sprite" parent="MuteTextureButton"]
-position = Vector2( 94.1487, 46.1506 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 47.4976, 47.3003 )
+scale = Vector2( 0.409236, 0.385351 )
 texture = ExtResource( 2 )
+
+[node name="AboutTextureButton" type="TextureButton" parent="."]
+margin_left = 761.688
+margin_top = 725.0
+margin_right = 853.688
+margin_bottom = 817.0
+texture_normal = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="AboutTextureButton"]
+position = Vector2( 45.4976, 46.3003 )
+scale = Vector2( 0.409236, 0.385351 )
+texture = ExtResource( 9 )
+
+[node name="Levels_title" type="Sprite" parent="."]
+position = Vector2( 1294.76, 309.453 )
+scale = Vector2( 0.659233, 0.669388 )
+texture = ExtResource( 7 )
 [connection signal="pressed" from="TutorialTextureButton" to="." method="_on_TutorialTextureButton_pressed"]
 [connection signal="pressed" from="MuteTextureButton" to="." method="_on_MuteTextureButton_pressed"]
+[connection signal="pressed" from="AboutTextureButton" to="." method="_on_AboutTextureButton_pressed"]

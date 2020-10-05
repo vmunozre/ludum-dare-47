@@ -3,7 +3,6 @@ extends Node
 var world = null		# Load at _ready world
 var levels_unlocked = ["tutorial_1"] # Add basic levels or load unlocked
 export (Array, PackedScene) var scenes
-export (Array, Texture) var scene_thumbnails
 export (Array, String) var scene_texts
 export (bool) var is_cheat_all_levels_activated
 
@@ -34,5 +33,5 @@ func load_next_level():
 			else:
 				lvl.queue_free()
 				print("Level " + lvl.level_name + " is already unlocke")
-	world.go_home()
+	world.load_the_end()
 

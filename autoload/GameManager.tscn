@@ -1,9 +1,7 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://autoload/GameManager.gd" type="Script" id=1]
 [ext_resource path="res://scenes/tutorial_levels/level_tutorial_1.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/textures/preview_levels/tutorial_2_preview.png" type="Texture" id=3]
-[ext_resource path="res://assets/textures/preview_levels/tutorial_1_preview.png" type="Texture" id=4]
 [ext_resource path="res://scenes/tutorial_levels/level_tutorial_2.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/levels/level_basic_3.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/levels/level_basic_2.tscn" type="PackedScene" id=7]
@@ -17,6 +15,4 @@
 [node name="GameManager" type="Node"]
 script = ExtResource( 1 )
 scenes = [ ExtResource( 2 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ]
-scene_thumbnails = [ ExtResource( 4 ), ExtResource( 3 ), null, null, null, null, null, null, null, null ]
-scene_texts = [ "Tutorial 1", "Tutorial 2", "Basic 1", "Basic 2", "Basic 3", "Dark 1", "Basic 5", "Basic 6", "Basic 7", "Basic 4" ]
-is_cheat_all_levels_activated = true
+scene_texts = [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" ]
