@@ -11,43 +11,39 @@ level_name = "basic_level_less_0"
 [node name="TileMap" parent="." index="0"]
 tile_data = PoolIntArray( -262152, 14, 0, -262151, 7, 0, -262150, 7, 0, -262149, 7, 0, -262148, 7, 0, -262147, 7, 0, -262146, 7, 0, -262145, 7, 0, -327680, 7, 0, -327679, 7, 0, -327678, 7, 0, -327677, 7, 0, -327676, 7, 0, -327675, 7, 0, -327674, 7, 0, -327673, 15, 0, -196617, 10, 0, -196616, 33, 0, -262137, 34, 0, -262136, 11, 0, -131081, 5, 0, -131078, 18, 0, -131075, 16, 0, -196606, 18, 0, -196603, 16, 0, -196600, 4, 0, -65545, 5, 0, -65542, 19, 0, -131070, 19, 0, -131064, 4, 0, -9, 5, 0, -6, 19, 0, -3, 18, 0, -1, 32, 0, -65536, 26, 0, -65534, 19, 0, -65531, 18, 0, -65528, 4, 0, 65527, 5, 0, 65530, 20, 0, 65533, 19, 0, 65535, 30, 0, 0, 24, 0, 2, 20, 0, 5, 19, 0, 8, 4, 0, 131063, 5, 0, 131069, 19, 0, 65541, 19, 0, 65544, 4, 0, 196599, 5, 0, 196602, 16, 0, 196605, 20, 0, 131074, 16, 0, 131077, 20, 0, 131080, 4, 0, 262135, 8, 0, 262136, 35, 0, 196615, 36, 0, 196616, 9, 0, 327672, 12, 0, 327673, 6, 0, 327674, 6, 0, 327675, 6, 0, 327676, 6, 0, 327677, 6, 0, 327678, 6, 0, 327679, 6, 0, 262144, 6, 0, 262145, 6, 0, 262146, 6, 0, 262147, 6, 0, 262148, 6, 0, 262149, 6, 0, 262150, 6, 0, 262151, 13, 0 )
 
-[node name="TileMapExtras" parent="." index="2"]
+[node name="TileMapExtras" parent="." index="3"]
 tile_data = PoolIntArray( -262153, 50, 0, -262152, 15, 0, -262148, 16, 0, -262146, 16, 0, -327680, 1, 0, -327678, 15, 0, -327675, 1, 0, -327673, 23, 0, -327672, 51, 0, -196617, 1, 0, -196614, 47, 0, -196613, 9, 0, -196612, 7, 0, -196611, 55, 0, -196610, 26, 0, -196609, 8, 0, -262144, 9, 0, -262142, 26, 0, -262140, 47, 0, -262138, 47, 0, -262137, 41, 0, -262136, 1, 0, -65545, 15, 0, -65544, 24, 0, -65543, 28, 0, -65539, 29, 0, -65537, 3, 0, -131072, 5, 0, -131071, 30, 0, -131067, 4, 0, -131065, 28, 0, -7, 30, 0, -1, 1, 0, -65536, 16, 0, -65535, 27, 0, -65533, 27, 0, -65528, 16, 0, 65527, 1, 0, 65528, 24, 0, 65532, 30, 0, 65534, 10, 0, 0, 19, 0, 6, 53, 0, 7, 30, 0, 131064, 24, 0, 131066, 4, 0, 131070, 27, 0, 131071, 8, 0, 65536, 29, 0, 65538, 4, 0, 65540, 30, 0, 131079, 28, 0, 262135, 13, 0, 262136, 43, 0, 262138, 5, 0, 262139, 3, 0, 262141, 5, 0, 262143, 4, 0, 196608, 3, 0, 196609, 5, 0, 196610, 5, 0, 196611, 55, 0, 196612, 3, 0, 196613, 4, 0, 196614, 5, 0, 196615, 44, 0, 196616, 16, 0, 327671, 48, 0, 327674, 15, 0, 327677, 16, 0, 262146, 16, 0, 262151, 22, 0, 262152, 49, 0 )
 
-[node name="Background" parent="." index="3"]
+[node name="Background" parent="." index="4"]
 position = Vector2( 4.00005, 3.00407e-05 )
 scale = Vector2( 16.625, 9.75 )
 
-[node name="Detailed_background" parent="." index="4"]
+[node name="Detailed_background" parent="." index="5"]
 position = Vector2( 4.00002, 0 )
 scale = Vector2( 1.12042, 1 )
 texture = ExtResource( 2 )
 
-[node name="KeyPosition" parent="." index="6"]
-position = Vector2( 208, -80 )
-
 [node name="Enemy" parent="." index="7" instance=ExtResource( 4 )]
 position = Vector2( 0, -104 )
 
-[node name="Key" parent="." index="8"]
+[node name="KeyPosition" parent="." index="8"]
 position = Vector2( 208, -80 )
 
-[node name="Door" parent="." index="9"]
-position = Vector2( -289, 3 )
-rotation = 1.5708
+[node name="Key" parent="." index="9"]
+position = Vector2( 208, -80 )
 
 [node name="Spike_Trap" parent="." index="10" instance=ExtResource( 3 )]
 position = Vector2( 304, -24 )
 rotation = 4.71239
 
-[node name="Spike_Trap2" parent="." index="11" instance=ExtResource( 3 )]
-position = Vector2( 208, 16 )
-rotation = 1.5708
-
-[node name="Spike_Trap3" parent="." index="12" instance=ExtResource( 3 )]
+[node name="Spike_Trap3" parent="." index="11" instance=ExtResource( 3 )]
 position = Vector2( -208, 128 )
 rotation = 4.71239
 
-[node name="Spike_Trap4" parent="." index="13" instance=ExtResource( 3 )]
+[node name="Spike_Trap4" parent="." index="12" instance=ExtResource( 3 )]
 position = Vector2( -304, -136 )
+rotation = 1.5708
+
+[node name="Door" parent="." index="13"]
+position = Vector2( -289, 3 )
 rotation = 1.5708

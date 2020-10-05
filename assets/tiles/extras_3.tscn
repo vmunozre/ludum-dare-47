@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/textures/tilesets/corners_4.png" type="Texture" id=1]
+
+[node name="extras_3" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 509, 45, 34, 34 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 577, 46, 34, 34 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 509, 107, 34, 34 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 577, 107, 34, 34 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 335, 15, 64, 64 )
+
+[node name="Sprite6" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 422, 15, 64, 64 )
+
+[node name="Sprite7" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 335, 92, 64, 64 )
+
+[node name="Sprite8" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 422, 92, 64, 64 )

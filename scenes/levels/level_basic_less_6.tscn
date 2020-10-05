@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/basic_level/Basic_level.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/textures/extras/background_10 x15.png" type="Texture" id=2]
+[ext_resource path="res://entities/enemies/Spike_Trap.tscn" type="PackedScene" id=3]
+[ext_resource path="res://entities/enemies/Enemy.tscn" type="PackedScene" id=4]
+
+[node name="level_basic_less_6" instance=ExtResource( 1 )]
+level_name = "level_basic_less_6"
+
+[node name="TileMap" parent="." index="0"]
+tile_data = PoolIntArray( -262150, 14, 0, -262149, 7, 0, -262148, 7, 0, -262147, 7, 0, -262146, 7, 0, -262145, 7, 0, -327680, 7, 0, -327679, 7, 0, -327678, 7, 0, -327677, 7, 0, -327676, 7, 0, -327675, 15, 0, -196615, 10, 0, -196614, 33, 0, -262139, 34, 0, -262138, 11, 0, -131079, 5, 0, -196602, 4, 0, -65543, 5, 0, -65541, 23, 0, -65540, 22, 0, -65539, 22, 0, -65538, 22, 0, -131071, 22, 0, -131070, 22, 0, -131069, 22, 0, -131068, 21, 0, -131066, 4, 0, -7, 5, 0, -2, 19, 0, -65535, 19, 0, -65530, 4, 0, 65529, 5, 0, 65534, 19, 0, 1, 19, 0, 6, 4, 0, 131065, 5, 0, 131068, 23, 0, 131069, 22, 0, 131070, 22, 0, 65537, 22, 0, 65538, 22, 0, 65539, 21, 0, 65542, 4, 0, 196601, 5, 0, 131078, 4, 0, 262137, 8, 0, 262138, 35, 0, 196613, 36, 0, 196614, 9, 0, 327674, 12, 0, 327675, 6, 0, 327676, 6, 0, 327677, 6, 0, 327678, 6, 0, 327679, 6, 0, 262144, 6, 0, 262145, 6, 0, 262146, 6, 0, 262147, 6, 0, 262148, 6, 0, 262149, 13, 0 )
+
+[node name="TileMapPart3" parent="." index="2"]
+tile_data = PoolIntArray( -196612, 5, 0, -262142, 4, 0, -65541, 2, 0, -131068, 3, 0, 131067, 0, 0, 65540, 1, 0, 196604, 7, 0, 131074, 6, 0 )
+
+[node name="TileMapExtras" parent="." index="3"]
+tile_data = PoolIntArray( -262151, 50, 0, -262150, 0, 0, -262148, 15, 0, -262147, 22, 0, -327679, 15, 0, -327678, 1, 0, -327677, 16, 0, -327675, 23, 0, -327674, 51, 0, -196615, 16, 0, -196614, 42, 0, -196613, 9, 0, -196612, 6, 0, -196611, 29, 0, -196610, 32, 0, -262143, 9, 0, -262142, 8, 0, -262141, 29, 0, -262140, 32, 0, -262138, 1, 0, -131079, 23, 0, -131077, 4, 0, -131076, 3, 0, -131075, 54, 0, -196607, 3, 0, -196605, 4, 0, -196603, 46, 0, -65543, 15, 0, -65542, 31, 0, -65540, 1, 0, -131072, 30, 0, -131070, 22, 0, -131067, 11, 0, -5, 47, 0, -4, 8, 0, -2, 0, 0, -1, 27, 0, -65536, 25, 0, -65534, 27, 0, -65533, 6, 0, -65531, 25, 0, -65530, 14, 0, 65529, 14, 0, 65530, 31, 0, 65533, 25, 0, 65534, 16, 0, 65535, 10, 0, 0, 11, 0, 3, 55, 0, 5, 30, 0, 131065, 1, 0, 131066, 27, 0, 131068, 23, 0, 131071, 31, 0, 65536, 30, 0, 65537, 0, 0, 65541, 25, 0, 196604, 6, 0, 196605, 29, 0, 131075, 32, 0, 131077, 30, 0, 131078, 15, 0, 262137, 14, 0, 262138, 43, 0, 262139, 2, 0, 262140, 2, 0, 262141, 5, 0, 262142, 5, 0, 262143, 2, 0, 196609, 3, 0, 196610, 5, 0, 196611, 4, 0, 196612, 54, 0, 196613, 36, 0, 327673, 48, 0, 327674, 23, 0, 327675, 15, 0, 327677, 1, 0, 327678, 16, 0, 262144, 12, 0, 262145, 16, 0, 262146, 0, 0, 262147, 14, 0, 262149, 0, 0, 262150, 49, 0 )
+
+[node name="Background" parent="." index="4"]
+position = Vector2( -4, -3.57628e-06 )
+scale = Vector2( 12.625, 9.75 )
+
+[node name="Detailed_background" parent="." index="5"]
+texture = ExtResource( 2 )
+
+[node name="PlayerStartPosition" parent="." index="6"]
+position = Vector2( -256, 200 )
+
+[node name="KeyPosition" parent="." index="7"]
+position = Vector2( -279.566, -40 )
+
+[node name="Key" parent="." index="8"]
+position = Vector2( -280, -40 )
+
+[node name="Door" parent="." index="9"]
+position = Vector2( 280, -33 )
+rotation = 3.14159
+
+[node name="Spike_Trap" parent="." index="10" instance=ExtResource( 3 )]
+position = Vector2( -8, -240 )
+rotation = 3.14159
+
+[node name="Spike_Trap2" parent="." index="11" instance=ExtResource( 3 )]
+position = Vector2( -128, 144 )
+rotation = 3.14159
+
+[node name="Spike_Trap3" parent="." index="12" instance=ExtResource( 3 )]
+position = Vector2( 128, 144 )
+rotation = 3.14159
+
+[node name="Enemy" parent="." index="13" instance=ExtResource( 4 )]
+position = Vector2( 40, 208 )

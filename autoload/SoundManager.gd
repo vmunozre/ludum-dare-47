@@ -44,7 +44,7 @@ func _process(delta):
 		var path = queue.pop_front()
 		available[0].stream = load(path)
 		if music_sound == path:
-			available[0].volume_db = -7
+			available[0].volume_db = -9
 		else:
 			available[0].volume_db = -4
 		available[0].play()
