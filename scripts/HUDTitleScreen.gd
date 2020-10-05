@@ -8,7 +8,7 @@ func _ready():
 	set_mute_button()
 
 func set_mute_button():
-	if not SoundManager.is_mute:
+	if SoundManager.is_mute:
 		$MuteTextureButton/Sprite.texture = load("res://assets/icons/icon_mute.png")
 	else:
 		$MuteTextureButton/Sprite.texture = load("res://assets/icons/icon_unmuted.png")

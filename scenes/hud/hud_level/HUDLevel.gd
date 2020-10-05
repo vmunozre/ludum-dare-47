@@ -28,7 +28,7 @@ func _on_Quit_pressed():
 		pass # Replace with function body.
 
 func set_mute_button():
-	if not SoundManager.is_mute:
+	if SoundManager.is_mute:
 		$BackgroundMenu/Mute/Sprite.texture = load("res://assets/icons/icon_mute.png")
 	else:
 		$BackgroundMenu/Mute/Sprite.texture = load("res://assets/icons/icon_unmuted.png")
